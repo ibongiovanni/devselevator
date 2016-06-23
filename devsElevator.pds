@@ -1,0 +1,23 @@
+Root-Coordinator
+ {
+  Simulator
+   {
+    Path = sinks/gnuplot.h
+    Parameters = 1.000000e+00,"set xrange [0:%tf] @ set grid @ set title 'Plot'","with impulses title 'First output'","","","",""
+   }
+  Simulator
+   {
+    Path = userdevs/elevatordevs/src/gen.h
+    Parameters = "0.111",""
+   }
+  EIC
+   {
+   }
+  EOC
+   {
+   }
+  IC
+   {
+    (1,0);(0,0)
+   }
+ }
