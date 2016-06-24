@@ -34,6 +34,8 @@ double lam;
 
 
 
+
+
 public:
 	gen(const char *n): Simulator(n) {};
 	void init(double, ...);

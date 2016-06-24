@@ -28,7 +28,7 @@ Coupled
             Description = Plot input signal using GnuPlot
             Graphic
                 {
-                Position = -13680 ; -1260
+                Position = -13830 ; -1260
                 Dimension = 675 ; 720
                 Direction = Right
                 Color = 15
@@ -69,7 +69,7 @@ Coupled
             {
             Source = Cmp ;  2 ;  1 ; 0
             Sink = Cmp ;  1 ;  1 ; -1
-            PointX = -15750 ; -15750 ; -13815
+            PointX = -15750 ; -15750 ; -13965
             PointY = -900 ; -900 ; -900
             }
         }
