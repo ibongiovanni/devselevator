@@ -41,7 +41,7 @@ Event gen::lambda(double t) {
 
 v= RanGen->IRandom(1,10);
 y[0]=v; 
-return Event(&y,0);
+return Event(&v,0);
 }
 void gen::exit() {
 //Code executed at the end of the simulation.
