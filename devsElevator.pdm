@@ -65,12 +65,231 @@ Coupled
                 s = Str;  ; Seed
                 }
             }
-        Line
+        Coupled
             {
-            Source = Cmp ;  2 ;  1 ; 0
-            Sink = Cmp ;  1 ;  1 ; -1
-            PointX = -15750 ; -15750 ; -13815
-            PointY = -900 ; -900 ; -900
+            Type = Coordinator
+            Name = Sistema
+            Ports = 1; 3
+            Description = Coupled DEVS model
+            Graphic
+                {
+                Position = -14955; -60
+                Dimension = 675; 720
+                Direction = Right
+                Color = 15
+                Icon = %basicelements%coupled.svg
+                Window = 5000; 5000; 5000; 5000
+                }
+            Parameters
+                {
+                }
+            System
+                {
+                Inport
+                    {
+                    Name = Inport0
+                    CoupledPort = 1
+                    Description = 
+                    Graphic
+                        {
+                        Position = -7065 ; 375
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport0
+                    CoupledPort = 1
+                    Description = 
+                    Graphic
+                        {
+                        Position = 660 ; 600
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport1
+                    CoupledPort = 2
+                    Description = 
+                    Graphic
+                        {
+                        Position = -2940 ; 1875
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport2
+                    CoupledPort = 3
+                    Description = 
+                    Graphic
+                        {
+                        Position = -4890 ; -750
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Tablero
+                    Ports = 2 ; 1
+                    Path = userdevs/elevatordevs/src/tablero.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -4980 ; 195
+                        Dimension = 675 ; 675
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Controlador
+                    Ports = 2 ; 2
+                    Path = userdevs/elevatordevs/src/controlador.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -3105 ; 195
+                        Dimension = 675 ; 675
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Ascensor
+                    Ports = 1 ; 1
+                    Path = userdevs/elevatordevs/src/ascensor.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -855 ; 240
+                        Dimension = 675 ; 720
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Point
+                    {
+                    ConectedLines = 2 ; 6 ; 7
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = -3750 ; 375
+                    }
+                Point
+                    {
+                    ConectedLines = 3 ; 8 ; 9
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = -3150 ; 1350
+                    }
+                Point
+                    {
+                    ConectedLines = 5 ; 10 ; 11
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = 150 ; 600
+                    }
+                Line
+                    {
+                    Source = Prt ;  1 ;  1 ; 0
+                    Sink = Cmp ;  1 ;  1 ; -1
+                    PointX = -6450 ; -6450 ; -5115
+                    PointY = 375 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Cmp ;  1 ;  1 ; 0
+                    Sink = Pnt ;  1 ; -1 ; 0
+                    PointX = -4200 ; -4200 ; -3750
+                    PointY = 525 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Cmp ;  2 ;  2 ; 0
+                    Sink = Pnt ;  2 ; -1 ; 0
+                    PointX = -2325 ; -1875 ; -1875 ; -3150
+                    PointY = 675 ; 675 ; 1350 ; 1350
+                    }
+                Line
+                    {
+                    Source = Cmp ;  2 ;  1 ; 0
+                    Sink = Cmp ;  3 ;  1 ; -1
+                    PointX = -2325 ; -2325 ; -1575 ; -1575 ; -990
+                    PointY = 375 ; 375 ; 375 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Cmp ;  3 ;  1 ; 0
+                    Sink = Pnt ;  3 ; -1 ; 0
+                    PointX = -75 ; -75 ; 150
+                    PointY = 600 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Prt ;  4 ; 0 ; -1
+                    Sink = Pnt ;  1 ; -1 ; 0
+                    PointX = -5040 ; -5250 ; -5250 ; -3750 ; -3750
+                    PointY = -750 ; -750 ; 0 ; 0 ; 375
+                    }
+                Line
+                    {
+                    Source = Pnt ;  1 ; -1 ; 0
+                    Sink = Cmp ;  2 ;  1 ; -1
+                    PointX = -3750 ; -3240 ; -3240
+                    PointY = 375 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Prt ;  3 ; 0 ; -1
+                    Sink = Pnt ;  2 ; -1 ; 0
+                    PointX = -3090 ; -3150 ; -3150
+                    PointY = 1875 ; 1875 ; 1350
+                    }
+                Line
+                    {
+                    Source = Pnt ;  2 ; -1 ; 0
+                    Sink = Cmp ;  1 ;  2 ; -1
+                    PointX = -3150 ; -5550 ; -5550 ; -5115
+                    PointY = 1350 ; 1350 ; 675 ; 675
+                    }
+                Line
+                    {
+                    Source = Prt ;  2 ; 0 ; -1
+                    Sink = Pnt ;  3 ; -1 ; 0
+                    PointX = 510 ; 510 ; 150
+                    PointY = 600 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Pnt ;  3 ; -1 ; 0
+                    Sink = Cmp ;  2 ;  2 ; -1
+                    PointX = 150 ; 150 ; -3450 ; -3450 ; -3240
+                    PointY = 600 ; -225 ; -225 ; 675 ; 675
+                    }
+                }
             }
+                Line
+                    {
+                    Source = Cmp ;  2 ;  1 ; 0
+                    Sink = Cmp ;  1 ;  1 ; -1
+                    PointX = -15750 ; -15750 ; -13815
+                    PointY = -900 ; -900 ; -900
+                    }
         }
     }
