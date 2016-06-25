@@ -7,7 +7,7 @@
 #include "event.h"
 #include "stdarg.h"
 
-#include "userdevs/elevatordevs/src/elevatorFloor.h"
+#include "elevatorFloor.h"
 
 
 class ascensor: public Simulator { 
@@ -33,6 +33,8 @@ double h2, sigma2;
 3 arribaParar
 4 abajoParar
 */
+
+
 public:
 	ascensor(const char *n): Simulator(n) {};
 	void init(double, ...);
