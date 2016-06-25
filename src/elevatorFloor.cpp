@@ -1,8 +1,6 @@
-class elevatorFloor {
-   public:
-
+#include "elevatorFloor.h"
 //nextFloor
-   static int nf(double h) {
+    int elevatorFloor::nf(double h) {
       if (h = 0) { return 0; }
       if (( 0 < h) && ( h <= 2)) { return 2; }
       if (( 2 < h) && ( h <= 4)) { return 4; }
@@ -15,7 +13,7 @@ class elevatorFloor {
       if (( 16 < h) && ( h <= 18)) { return 18; }
    }
 //previousFloor
-   static int pf(double h) {
+    int elevatorFloor::pf(double h) {
       if (( 0 <= h) && ( h < 2)) { return 0; }
       if (( 2 <= h) && ( h < 4)) { return 2; }
       if (( 4 <= h) && ( h < 6)) { return 4; }
@@ -27,4 +25,4 @@ class elevatorFloor {
       if (( 16 <= h) && ( h < 18)) { return 16; }
       if (h = 18) { return 18; }   
    }   
-};   
+  
