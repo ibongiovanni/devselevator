@@ -18,7 +18,7 @@ class LinkedList{
 	 	int size() const;
 		bool empty() const; 
 		void print() const; 
-		int& at(int index); 
+		int at(int index); 
 		Node* find(int value) const; 
 		bool contains(int value) const; 
 		void append(int value); 

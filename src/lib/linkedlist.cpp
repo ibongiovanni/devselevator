@@ -36,7 +36,7 @@ void LinkedList::print() const{
 	cout << endl;
 }
 
-int& LinkedList::at(int index) {
+int LinkedList::at(int index) {
 	if(index < 0 || index >= this->length) { 
 		throw out_of_range("index out of bounds");
 	}
