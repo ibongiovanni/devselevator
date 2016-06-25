@@ -8,13 +8,22 @@ va_start(parameters,t);
 //      %Name% is the parameter name
 //	%Type% is the parameter type
 
+char *fvar= va_arg(parameters,char*); 
+vc =getScilabVar(fvar );
+fvar= va_arg(parameters,char*);
+altPiso =getScilabVar(fvar );
 }
 double ascensor::ta(double t) {
-//This function returns a double.
+return sigma;
 
 }
 void ascensor::dint(double t) {
-
+switch(est){
+	case 0: { h = nf(h); sigma = vc*altPiso; }
+	case 1: { h = pf(h); sigma = vc*altPiso; }
+	case 3: { est = 2; h = nf(h); sigma = INF; }
+	case 4: { est = 2; h = pf(h); sigma = INF; }
+}
 }
 void ascensor::dext(Event x, double t) {
 //The input event is in the 'x' variable.
@@ -23,6 +32,33 @@ void ascensor::dext(Event x, double t) {
 //     'x.port' is the port number
 //     'e' is the time elapsed since last transition
 
+int *aux;
+aux = (int*)(x.value); 
+
+switch(est){
+	case 0: h2 = h + vc*e;
+	case 1: h2 = h - vc*e;
+	case 2: h2 = h;
+}
+est2 = aux[0];
+sigma2 = sigma- e;
+//if ((est = 0) && (aux[0] = 0)) { sigma2 = sigma - e; est2 = aux[0]; }
+if ((est = 0) && (aux[0] = 1)) { sigma2 = vc*(h2 - pf(h2)); }
+if ((est = 0) && (aux[0] = 2)) { sigma2 = vc*(nf(h2) - h2); est2 = 3; }
+
+if ((est = 1) && (aux[0] = 0)) { sigma2 = vc*(nf(h2) - h2); }
+//if ((est = 1) && (aux[0] = 1)) { sigma2 = sigma - e; est2 = aux[0]; }
+if ((est = 1) && (aux[0] = 2)) { sigma2 = vc*(h2 - pf(h2)); est2 = 4; }
+
+if ((est = 2) && (aux[0] = 0)){
+	if (h2 <= 16) { sigma2 = vc*(2*altPiso);}}
+
+if ((est = 2) && (aux[0] = 1)){
+	if (h2 >= 2) { sigma2 = vc*(2*altPiso);}}
+
+
+
+
 }
 Event ascensor::lambda(double t) {
 //This function returns an Event:
@@ -30,9 +66,10 @@ Event ascensor::lambda(double t) {
 //where:
 //     %&Value% points to the variable which contains the value.
 //     %NroPort% is the port number (from 0 to n-1)
+double value = (h/2)+1;
+return Event(&value,0);
 
 
-return Event();
 }
 void ascensor::exit() {
 //Code executed at the end of the simulation.
