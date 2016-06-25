@@ -1,3 +1,4 @@
+//CPP:userdevs/elevatordevs/src/lib/linkedlist.cpp
 //CPP:userdevs/elevatordevs/src/tablero.cpp
 #if !defined tablero_h
 #define tablero_h
@@ -6,6 +7,7 @@
 #include "event.h"
 #include "stdarg.h"
 
+#include "lib/linkedlist.h"
 
 
 class tablero: public Simulator { 
@@ -13,7 +15,22 @@ class tablero: public Simulator {
 // output variables
 // and parameters
 
+#define INF 1e20;
+
+/* Messages numeration
+0 arriba
+1 abajo
+2 parar 
+3 libre
+4 ocupado
+5 arribaParar
+6 abajoParar
+*/
+
 //State
+LinkedList *ps;
+int msj;
+double sigma;
 
 public:
 	tablero(const char *n): Simulator(n) {};
