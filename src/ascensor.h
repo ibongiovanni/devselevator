@@ -26,12 +26,14 @@ double h,sigma;
 int est2;
 double h2, sigma2;
 
-/*
+/* Messages numeration
 0 arriba
 1 abajo
 2 parar 
-3 arribaParar
-4 abajoParar
+3 libre
+4 ocupado
+5 arribaParar
+6 abajoParar
 */
 
 

@@ -12,6 +12,10 @@ char *fvar= va_arg(parameters,char*);
 vc =getScilabVar(fvar );
 fvar= va_arg(parameters,char*);
 altPiso =getScilabVar(fvar );
+
+est = 2;
+h = 0;
+sigma = INF;
 }
 double ascensor::ta(double t) {
 return sigma;
@@ -21,8 +25,8 @@ void ascensor::dint(double t) {
 switch(est){
 	case 0: { h = nf(h); sigma = vc*altPiso; }
 	case 1: { h = pf(h); sigma = vc*altPiso; }
-	case 3: { est = 2; h = nf(h); sigma = INF; }
-	case 4: { est = 2; h = pf(h); sigma = INF; }
+	case 5: { est = 2; h = nf(h); sigma = INF; }
+	case 6: { est = 2; h = pf(h); sigma = INF; }
 }
 }
 void ascensor::dext(Event x, double t) {
@@ -44,17 +48,21 @@ est2 = aux[0];
 sigma2 = sigma- e;
 //if ((est = 0) && (aux[0] = 0)) { sigma2 = sigma - e; est2 = aux[0]; }
 if ((est = 0) && (aux[0] = 1)) { sigma2 = vc*(h2 - pf(h2)); }
-if ((est = 0) && (aux[0] = 2)) { sigma2 = vc*(nf(h2) - h2); est2 = 3; }
+if ((est = 0) && (aux[0] = 2)) { sigma2 = vc*(nf(h2) - h2); est2 = 5; }
 
 if ((est = 1) && (aux[0] = 0)) { sigma2 = vc*(nf(h2) - h2); }
 //if ((est = 1) && (aux[0] = 1)) { sigma2 = sigma - e; est2 = aux[0]; }
-if ((est = 1) && (aux[0] = 2)) { sigma2 = vc*(h2 - pf(h2)); est2 = 4; }
+if ((est = 1) && (aux[0] = 2)) { sigma2 = vc*(h2 - pf(h2)); est2 = 6; }
 
 if ((est = 2) && (aux[0] = 0)){
 	if (h2 <= 16) { sigma2 = vc*(2*altPiso);}}
 
 if ((est = 2) && (aux[0] = 1)){
 	if (h2 >= 2) { sigma2 = vc*(2*altPiso);}}
+
+est = est2;
+h = h2;
+sigma = sigma2;
 
 
 
