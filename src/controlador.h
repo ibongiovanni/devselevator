@@ -22,12 +22,14 @@ double sigma;
 int dest_,piso_,msj_;
 double sigma_;
 
-/*
+/* Messages numeration
 0 arriba
 1 abajo
-2 parar
+2 parar 
 3 libre
 4 ocupado
+5 arribaParar
+6 abajoParar
 */
 public:
 	controlador(const char *n): Simulator(n) {};
