@@ -1,6 +1,6 @@
 #include "elevatorFloor.h"
 //nextFloor
-    int elevatorFloor::nf(double h) {
+    int nf(double h) {
       if (h = 0) { return 0; }
       if (( 0 < h) && ( h <= 2)) { return 2; }
       if (( 2 < h) && ( h <= 4)) { return 4; }
@@ -13,7 +13,7 @@
       if (( 16 < h) && ( h <= 18)) { return 18; }
    }
 //previousFloor
-    int elevatorFloor::pf(double h) {
+    int pf(double h) {
       if (( 0 <= h) && ( h < 2)) { return 0; }
       if (( 2 <= h) && ( h < 4)) { return 2; }
       if (( 4 <= h) && ( h < 6)) { return 4; }
