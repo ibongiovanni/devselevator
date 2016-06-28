@@ -70,6 +70,8 @@ Coupled
                 }
             Parameters
                 {
+                vc = Str; 1 ; 
+                altPiso = Str; 2 ; 
                 }
             }
         Atomic
@@ -212,6 +214,8 @@ Coupled
                         }
                     Parameters
                         {
+                        vc = Str; 1 ; 
+                        altPiso = Str; 2 ; 
                         }
                     }
                 Point
