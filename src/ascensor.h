@@ -36,6 +36,7 @@ double h2, sigma2;
 6 abajoParar
 */
 
+int value;
 
 public:
 	ascensor(const char *n): Simulator(n) {};

@@ -32,6 +32,8 @@ LinkedList *ps;
 int msj;
 double sigma;
 
+//Output
+int v;
 public:
 	tablero(const char *n): Simulator(n) {};
 	void init(double, ...);

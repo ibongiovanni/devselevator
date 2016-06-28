@@ -33,14 +33,15 @@ void gen::dext(Event x, double t) {
 
 }
 Event gen::lambda(double t) {
-//This function returns an Event:
+ //This function returns an Event:
 //     Event(%&Value%, %NroPort%)
 //where:
 //     %&Value% points to the variable which contains the value.
 //     %NroPort% is the port number (from 0 to n-1)
 
 v= RanGen->IRandom(1,10);
-y[0]=v; 
+printLog("t= %2.2f\t",t);
+printLog("GENERADOR: Va un pedido= %d\n",v);
 return Event(&v,0);
 }
 void gen::exit() {

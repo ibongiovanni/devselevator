@@ -22,7 +22,7 @@ class gen: public Simulator {
 double s;
 
 //output
-double v;
+int v;
 
 //aux
 CRandomMersenne *RanGen;
