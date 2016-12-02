@@ -1,5 +1,6 @@
 #ifndef LINKEDLIST_H_ 
 #define LINKEDLIST_H_
+#include <string>
 class Node{ 
   public: 
 	int data;
@@ -18,6 +19,7 @@ class LinkedList{
 	 	int size() const;
 		bool empty() const; 
 		void print() const; 
+		const char* tostring() const; 
 		int at(int index); 
 		Node* find(int value) const; 
 		bool contains(int value) const; 

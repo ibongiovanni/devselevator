@@ -1,5 +1,7 @@
 #include <iostream>
 #include <stdexcept>
+#include <string>
+#include <sstream>
 #include "linkedlist.h"
 using namespace std;
 
@@ -34,6 +36,18 @@ void LinkedList::print() const{
 		cout << node_ptr->data << " ";
 	}
 	cout << endl;
+}
+
+const char* LinkedList::tostring() const{
+	string rep="[ ";
+	for (Node *node_ptr=this->head; node_ptr != NULL; node_ptr=node_ptr->next) { 
+		std::stringstream ss;
+		ss << node_ptr->data;
+		std::string str = ss.str();
+		rep += str + " - ";
+	}
+	rep += " ]";
+	return rep.c_str();
 }
 
 int LinkedList::at(int index) {
@@ -125,6 +139,7 @@ void LinkedList::erase(int index) {
 	} else {
 		prev_ptr->next = node_ptr->next; 
 		delete node_ptr;
-	} 
+	}
+	length--;
 }
 
