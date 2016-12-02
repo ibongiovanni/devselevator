@@ -17,14 +17,19 @@ double controlador::ta(double t) {
 return sigma;
 }
 void controlador::dint(double t) {
-if ( msj == 0 || msj == 1){msj_ = 4; sigma = 0;}
-if ( msj == 2){msj_ = 3; sigma = 0;}
-if ( msj == 3 || msj == 4){sigma = INF;}
+printLog("(-- dint CONTROLADOR \t\t");
+
+printLog("t= %2.2f\t",t);
+if ( msj == 0 || msj == 1){msj_ = 4; sigma = 0; printLog("CONTROLADOR: envie un %d al ascensor ",msj);}
+if ( msj == 2){msj_ = 3; sigma = 0; printLog("CONTROLADOR: envie un %d al ascensor ",msj);}
+if ( msj == 3 || msj == 4){sigma = INF; printLog("CONTROLADOR: envie un %d al tablero ",msj);}
 
 msj = msj_;
+printLog("\t --)\n");
+
 }
 void controlador::dext(Event x, double t) {
-//The input event is in the 'x' variable.
+printLog("(-- dext CONTROLADOR \t\t");//The input event is in the 'x' variable.
 //where:
 //     'x.value' is the value (pointer to void)
 //     'x.port' is the port number
@@ -34,7 +39,7 @@ aux = (int*)(x.value);
 	
 if (x.port == 0) {
 	printLog("t= %2.2f\t",t);
-	printLog("CONTROLADOR: el tablero mando un= %d\n",aux[0]);
+	printLog("CONTROLADOR: el tablero mando un= %d ",aux[0]);
 	if(dest != piso){}
 	else{
 		if (aux[0] < piso) {msj = 1; sigma = 0; dest = aux[0]; }
@@ -44,28 +49,30 @@ if (x.port == 0) {
 }
 else{
 	printLog("t= %2.2f\t",t);
-	printLog("CONTROLADOR: el asensor mando un= %d\n",aux[0]);
+	printLog("CONTROLADOR: el asensor mando un= %d ",aux[0]);
 	if (aux[0] == dest) { piso = aux[0]; msj = 2; sigma = 0;}
 	else {piso = aux[0]; sigma = INF;}
 }
 
+printLog("\t --) \n");
 }
 Event controlador::lambda(double t) {
-//This function returns an Event:
+printLog("(-- lambda CONTROLADOR \t\t");//This function returns an Event:
 //     Event(%&Value%, %NroPort%)
 //where:
 //     %&Value% points to the variable which contains the value.
 //     %NroPort% is the port number (from 0 to n-1)
 if ( msj == 0 || msj == 1 || msj == 2){
 	printLog("t= %2.2f\t",t);
-	printLog("CONTROLADOR: mando al ascensor= %d\n",msj);
+	printLog("CONTROLADOR: mando al ascensor= %d",msj); printLog("\t --) \n");
 	return Event(&msj,0);
 }
 else {
 	printLog("t= %2.2f\t",t);
-	printLog("CONTROLADOR: mando al tablero= %d\n",msj);
+	printLog("CONTROLADOR: mando al tablero= %d",msj); printLog("\t --) \n");
 	return Event(&msj,1);
 }
+
 
 
 }

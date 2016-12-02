@@ -23,6 +23,7 @@ return sigma;
 
 }
 void ascensor::dint(double t) {
+printLog("(-- dint ASCENSOR \t\t\t");
 printLog("t= %2.2f\t",t);
 switch(est){
 	case 0: { h = nf(h); sigma = vc*altPiso; printLog("ASCENSOR: voy a seguir subiendo"); break; }
@@ -30,11 +31,11 @@ switch(est){
 	case 5: { est = 2; sigma = INF; printLog("ASCENSOR: voy a descansar"); break;}
 	case 6: { est = 2; sigma = INF; printLog("ASCENSOR: descansar"); break;}
 }
-printLog(", sigma= %2.2f\n",sigma);
-
+printLog(",h= %2.2f, sigma= %2.2f ",h,sigma);
+printLog("\t --) \n");
 }
 void ascensor::dext(Event x, double t) {
-//The input event is in the 'x' variable.
+printLog("(-- dext ASCENSOR \t\t\t");//The input event is in the 'x' variable.
 //where:
 //     'x.value' is the value (pointer to void)
 //     'x.port' is the port number
@@ -71,13 +72,14 @@ h = h2;
 sigma = sigma2;
 
 printLog("t= %2.2f\t",t);
-printLog("ASCENSOR: estado: est= %d, h= %2.2f, sigma= %2.2f\n",est,h,sigma);
+printLog("ASCENSOR: estado: est= %d, h= %2.2f, sigma= %2.2f ",est,h,sigma);
 
+printLog("\t --) \n");
 
 
 }
 Event ascensor::lambda(double t) {
-//This function returns an Event:
+printLog("(-- lambda ASCENSOR \t\t");//This function returns an Event:
 //     Event(%&Value%, %NroPort%)
 //where:
 //     %&Value% points to the variable which contains the value.
@@ -85,8 +87,10 @@ Event ascensor::lambda(double t) {
 if ( est==0 || est==5) {value=nf(h)/2+1;}
 else {value=pf(h)/2+1;}
 printLog("t= %2.2f\t",t);
-printLog("ASCENSOR: llegue al piso= %d\n",value);
+printLog("ASCENSOR: llegue al piso= %d, h: %2.2f ",value,h);
+printLog("\t --) \n");
 return Event(&value,0);
+
 
 }
 void ascensor::exit() {
