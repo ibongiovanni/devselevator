@@ -54,9 +54,12 @@ else{	//Controller message arrived
 	msj=aux[0];
 	if (aux[0]==3){
 		if (ps->empty()){
+			printLog(". La cola esta vacia");
 			sigma=INF;
 		}
 		else{
+			printLog(". La cola es= "); 
+			printLog(ps->tostring());
 			sigma=0;
 		}
 	}
