@@ -28,7 +28,7 @@ Coupled
             Description = Plot input signal using GnuPlot
             Graphic
                 {
-                Position = -12930 ; -570
+                Position = -10455 ; -195
                 Dimension = 2325 ; 1890
                 Direction = Right
                 Color = 15
@@ -39,7 +39,7 @@ Coupled
                 Inputs = Str; %Inputs ; Number of inputs
                 Format = Str; set xrange [0:%tf] @ set grid @ set title 'Plot' ; General Formatting (use @ as line break)
                 Format1 = Str; with impulses title 'pedido' ; Formatting options for input 1
-                Format2 = Str; with points title 'piso ascensor' ; Formatting options for input 2
+                Format2 = Str; title 'piso ascensor' ; Formatting options for input 2
                 Format3 = Str; with points title 'msj controlador' ; Formatting options for input 3
                 Format4 = Str; with points title 'salida tablero' ; Formatting options for input 4
                 Format5 = Str;  ; Formatting options for input 5
@@ -62,7 +62,7 @@ Coupled
             Parameters
                 {
                 lambda = Str; 0.111 ; lambda parameter for exponetial distribution
-                s = Str; 5 ; Seed
+                s = Str; 123456 ; Seed
                 }
             }
         Coupled
@@ -286,26 +286,76 @@ Coupled
                     }
                 }
             }
-                Line
-                    {
-                    Source = Cmp ;  2 ;  1 ; 0
-                    Sink = Cmp ;  1 ;  1 ; -1
-                    PointX = -15750 ; -13065 ; -13065
-                    PointY = -900 ; -900 ; -75
-                    }
-                Line
-                    {
-                    Source = Cmp ;  2 ;  1 ; 0
-                    Sink = Cmp ;  3 ;  1 ; -1
-                    PointX = -15750 ; -15315 ; -15315
-                    PointY = -900 ; -900 ; 300
-                    }
-                Line
-                    {
-                    Source = Cmp ;  3 ;  1 ; 0
-                    Sink = Cmp ;  1 ;  2 ; -1
-                    PointX = -14400 ; -13575 ; -13575 ; -13065
-                    PointY = 75 ; 75 ; 825 ; 825
-                    }
+        Atomic
+            {
+            Name = int2float
+            Ports = 1 ; 1
+            Path = userdevs/int2float.h
+            Description = Atomic DEVS model
+            Graphic
+                {
+                Position = -13155 ; 1290
+                Dimension = 675 ; 720
+                Direction = Right
+                Color = 15
+                Icon = None
+                }
+            Parameters
+                {
+                }
+            }
+        Atomic
+            {
+            Name = int2float0
+            Ports = 1 ; 1
+            Path = userdevs/int2float.h
+            Description = Atomic DEVS model
+            Graphic
+                {
+                Position = -13080 ; -1185
+                Dimension = 675 ; 720
+                Direction = Right
+                Color = 15
+                Icon = None
+                }
+            Parameters
+                {
+                }
+            }
+        Line
+            {
+            Source = Cmp ;  2 ;  1 ; 0
+            Sink = Cmp ;  3 ;  1 ; -1
+            PointX = -15750 ; -15750 ; -15315 ; -15315
+            PointY = -900 ; -900 ; -900 ; 300
+            }
+        Line
+            {
+            Source = Cmp ;  3 ;  1 ; 0
+            Sink = Cmp ;  4 ;  1 ; -1
+            PointX = -14400 ; -13290 ; -13290
+            PointY = 75 ; 75 ; 1650
+            }
+        Line
+            {
+            Source = Cmp ;  4 ;  1 ; 0
+            Sink = Cmp ;  1 ;  2 ; -1
+            PointX = -12375 ; -10590 ; -10590
+            PointY = 1650 ; 1650 ; 1200
+            }
+        Line
+            {
+            Source = Cmp ;  2 ;  1 ; 0
+            Sink = Cmp ;  5 ;  1 ; -1
+            PointX = -15750 ; -13215 ; -13215
+            PointY = -900 ; -900 ; -825
+            }
+        Line
+            {
+            Source = Cmp ;  5 ;  1 ; 0
+            Sink = Cmp ;  1 ;  1 ; -1
+            PointX = -12300 ; -10590 ; -10590
+            PointY = -825 ; -825 ; 300
+            }
         }
     }

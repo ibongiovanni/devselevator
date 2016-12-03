@@ -3,12 +3,12 @@ Root-Coordinator
   Simulator
    {
     Path = sinks/gnuplot.h
-    Parameters = 2.000000e+00,"set xrange [0:%tf] @ set grid @ set title 'Plot'","with impulses title 'pedido'","with points title 'piso ascensor'","with points title 'msj controlador'","with points title 'salida tablero'",""
+    Parameters = 2.000000e+00,"set xrange [0:%tf] @ set grid @ set title 'Plot'","with impulses title 'pedido'","title 'piso ascensor'","with points title 'msj controlador'","with points title 'salida tablero'",""
    }
   Simulator
    {
     Path = userdevs/elevatordevs/src/gen.h
-    Parameters = "0.111","5"
+    Parameters = "0.111","123456"
    }
     Coordinator
      {
@@ -45,6 +45,16 @@ Root-Coordinator
         (1,0);(0,1)
        }
      }
+  Simulator
+   {
+    Path = userdevs/int2float.h
+    Parameters = 
+   }
+  Simulator
+   {
+    Path = userdevs/int2float.h
+    Parameters = 
+   }
   EIC
    {
    }
@@ -53,8 +63,10 @@ Root-Coordinator
    }
   IC
    {
-    (1,0);(0,0)
     (1,0);(2,0)
-    (2,0);(0,1)
+    (2,0);(3,0)
+    (3,0);(0,1)
+    (1,0);(4,0)
+    (4,0);(0,0)
    }
  }
