@@ -19,6 +19,8 @@ class dist2: public Simulator {
 double sigma;
 int p;
 int as1,as2; //3=libre 4=ocupado
+int cola1,cola2; //largo de cada cola
+
 
 int out;
 int asOut;

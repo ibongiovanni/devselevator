@@ -10,8 +10,11 @@ va_start(parameters,t);
 
 sigma=INF;
 
+//Both systems are free at begining
 as1=3;
 as2=3;
+
+cola1=cola2=0;
 }
 double dist2::ta(double t) {
 //This function returns a double.
@@ -43,12 +46,22 @@ if (x.port==0){
 }
 else{
 	if (x.port == 1){ //Message from system1
-		as1 = aux[0];
-		printLog("DISTRIBUIDOR: el sistema 1 mando un= %d",as1);
+		if (aux[0]==3) {
+			if (cola1>0) cola1--;
+		}
+		if (cola1==0)
+			as1 = 3;
+		else as1 = 4;
+		printLog("DISTRIBUIDOR: el sistema 1 mando un= %d, la cola es de %d pedidos, as1= %d",aux[0],cola1,as1);
 	}
 	else{ //Message from system2
-		as2 = aux[0];
-		printLog("DISTRIBUIDOR: el sistema 2 mando un= %d",as2);
+		if (aux[0]==3) {
+			if (cola2>0) cola2--;
+		}
+		if (cola2==0)
+			as2 = 3;
+		else as2 = 4;
+		printLog("DISTRIBUIDOR: el sistema 2 mando un= %d, la cola es de %d pedidos, as2= %d",aux[0],cola2,as2);
 	}
 	sigma=INF;
 }
@@ -67,9 +80,11 @@ printLog("t= %2.2f\t",t);
 
 if (as1==3 || as2==4){ //is the system1 free? Or both system are busy?
 	asOut=0; //Go to the system1
+	cola1++;
 }
 else { //then system1 is busy and system2 is free
 	asOut=1; //Go to the system2
+	cola2++;
 }
 
 out = p;
