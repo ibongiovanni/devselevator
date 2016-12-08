@@ -50,8 +50,16 @@ if (x.port == 0) {
 else{
 	printLog("t= %2.2f\t",t);
 	printLog("CONTROLADOR: el asensor mando un= %d ",aux[0]);
-	if (aux[0] == dest) { piso = aux[0]; msj = 2; sigma = 0;}
-	else {piso = aux[0]; sigma = INF;}
+	if (aux[0] == dest && aux[0] != lastMsjAsc) { 
+		piso = aux[0]; 
+		msj = 2; 
+		sigma = 0;
+		lastMsjAsc=aux[0];
+	}
+	else {
+		piso = aux[0]; 
+		sigma = INF;
+	}
 }
 
 printLog("\t --) \n");

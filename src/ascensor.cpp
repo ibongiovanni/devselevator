@@ -84,14 +84,18 @@ printLog("(-- lambda ASCENSOR \t\t");//This function returns an Event:
 //where:
 //     %&Value% points to the variable which contains the value.
 //     %NroPort% is the port number (from 0 to n-1)
+
+//Calculate actual position
 if ( est==0 || est==5) {value=(h + vc*sigma)/2+1;}
 else {value=(h - vc*sigma)/2+1;}
-printLog("t= %2.2f\t",t);
-printLog("ASCENSOR: llegue al piso= %d, h: %2.2f, est= %d ",value,h,est);
-printLog("\t --) \n");
-return Event(&value,0);
 
-
+if (lastOut != value){ //To avoid from sending repeated message
+	lastOut=value;
+	printLog("t= %2.2f\t",t);
+	printLog("ASCENSOR: llegue al piso= %d, h: %2.2f, est= %d ",value,h,est);
+}
+	printLog("\t --) \n");
+	return Event(&value,0);
 }
 void ascensor::exit() {
 //Code executed at the end of the simulation.

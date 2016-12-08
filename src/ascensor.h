@@ -21,6 +21,7 @@ double vc,altPiso;
 //State
 int est;
 double h,sigma;
+int lastOut;
 
 
 int est2;

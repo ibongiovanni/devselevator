@@ -17,6 +17,7 @@ class controlador: public Simulator {
 //State
 int dest,piso,msj;
 double sigma;
+int lastMsjAsc;
 
 //out
 int dest_,piso_,msj_;
