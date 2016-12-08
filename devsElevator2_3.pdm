@@ -1,0 +1,731 @@
+Coupled
+    {
+    Type = Root
+    Name = devsElevator2_3
+    Ports = 0; 0
+    Description = 
+    Graphic
+        {
+        Position = 0; 0
+        Dimension = 600; 600
+        Direction = Right
+        Color = 15
+        Icon = 
+        Window = 5000; 5000; 5000; 5000
+        }
+    Parameters
+        {
+        Vc = Val; 2 ; Elevator Speed (in m/s)
+        AltP = Val; 2 ; Height of each floor (on meters)
+        }
+    System
+        {
+        Atomic
+            {
+            Name = GnuPlot0
+            Ports = 4 ; 0
+            Path = sinks/gnuplot.h
+            Description = Plot input signal using GnuPlot
+            Graphic
+                {
+                Position = -9870 ; 150
+                Dimension = 4140 ; 3450
+                Direction = Right
+                Color = 15
+                Icon = %sinks%gnuplot.svg
+                }
+            Parameters
+                {
+                Inputs = Str; %Inputs ; Number of inputs
+                Format = Str; set xrange [0:%tf] @ set grid @ set title 'Plot' ; General Formatting (use @ as line break)
+                Format1 = Str; with impulses title 'pedido al ascensor 1' ; Formatting options for input 1
+                Format2 = Str; with linespoints title 'piso ascensor 1' ; Formatting options for input 2
+                Format3 = Str; with linespoints title 'piso ascensor 2' ; Formatting options for input 3
+                Format4 = Str; with impulses title 'pedido al ascensor 2' ; Formatting options for input 4
+                Format5 = Str;  ; Formatting options for input 5
+                }
+            }
+        Atomic
+            {
+            Name = Generator
+            Ports = 0 ; 1
+            Path = userdevs/elevatordevs/src/gen.h
+            Description = Petissions generator
+            Graphic
+                {
+                Position = -19155 ; -330
+                Dimension = 675 ; 675
+                Direction = Right
+                Color = 15
+                Icon = None
+                }
+            Parameters
+                {
+                lambda = Str; 0.111 ; lambda parameter for exponetial distribution
+                s = Str; 123456 ; Seed
+                }
+            }
+        Coupled
+            {
+            Type = Coordinator
+            Name = Sistema1
+            Ports = 1; 3
+            Description = Coupled DEVS model
+            Graphic
+                {
+                Position = -14805; 1290
+                Dimension = 675; 720
+                Direction = Right
+                Color = 15
+                Icon = %basicelements%coupled.svg
+                Window = 5000; 5000; 5000; 5000
+                }
+            Parameters
+                {
+                }
+            System
+                {
+                Inport
+                    {
+                    Name = Inport0
+                    CoupledPort = 1
+                    Description = 
+                    Graphic
+                        {
+                        Position = -7065 ; 375
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport0
+                    CoupledPort = 1
+                    Description = 
+                    Graphic
+                        {
+                        Position = 660 ; 600
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport1
+                    CoupledPort = 2
+                    Description = 
+                    Graphic
+                        {
+                        Position = -2940 ; 1875
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Outport
+                    {
+                    Name = Outport2
+                    CoupledPort = 3
+                    Description = 
+                    Graphic
+                        {
+                        Position = -4890 ; -750
+                        Dimension = 480
+                        Direction = Right
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Controlador
+                    Ports = 2 ; 2
+                    Path = userdevs/elevatordevs/src/controlador.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -3105 ; 195
+                        Dimension = 675 ; 675
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Ascensor
+                    Ports = 1 ; 1
+                    Path = userdevs/elevatordevs/src/ascensor.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -855 ; 240
+                        Dimension = 675 ; 720
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        vc = Str; 1 ; 
+                        altPiso = Str; 2 ; 
+                        }
+                    }
+                Atomic
+                    {
+                    Name = Tablero
+                    Ports = 2 ; 1
+                    Path = userdevs/elevatordevs/src/tablero.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -4980 ; 195
+                        Dimension = 675 ; 675
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Point
+                    {
+                    ConectedLines = 2 ; 6 ; 7
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = -3750 ; 375
+                    }
+                Point
+                    {
+                    ConectedLines = 3 ; 8 ; 9
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = -3150 ; 1350
+                    }
+                Point
+                    {
+                    ConectedLines = 5 ; 10 ; 11
+                    ConectedExtrems = Org ; Org ; Org
+                    Position = 150 ; 600
+                    }
+                Line
+                    {
+                    Source = Prt ;  1 ;  1 ; 0
+                    Sink = Cmp ;  3 ;  1 ; -1
+                    PointX = -6450 ; -6450 ; -5115
+                    PointY = 375 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Cmp ;  3 ;  1 ; 0
+                    Sink = Pnt ;  1 ; -1 ; 0
+                    PointX = -4200 ; -4200 ; -3750
+                    PointY = 525 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Cmp ;  1 ;  2 ; 0
+                    Sink = Pnt ;  2 ; -1 ; 0
+                    PointX = -2325 ; -1875 ; -1875 ; -3150
+                    PointY = 675 ; 675 ; 1350 ; 1350
+                    }
+                Line
+                    {
+                    Source = Cmp ;  1 ;  1 ; 0
+                    Sink = Cmp ;  2 ;  1 ; -1
+                    PointX = -2325 ; -2325 ; -1575 ; -1575 ; -990
+                    PointY = 375 ; 375 ; 375 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Cmp ;  2 ;  1 ; 0
+                    Sink = Pnt ;  3 ; -1 ; 0
+                    PointX = -75 ; -75 ; 150
+                    PointY = 600 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Prt ;  4 ; 0 ; -1
+                    Sink = Pnt ;  1 ; -1 ; 0
+                    PointX = -5040 ; -5250 ; -5250 ; -3750 ; -3750
+                    PointY = -750 ; -750 ; 0 ; 0 ; 375
+                    }
+                Line
+                    {
+                    Source = Pnt ;  1 ; -1 ; 0
+                    Sink = Cmp ;  1 ;  1 ; -1
+                    PointX = -3750 ; -3240 ; -3240
+                    PointY = 375 ; 375 ; 375
+                    }
+                Line
+                    {
+                    Source = Prt ;  3 ; 0 ; -1
+                    Sink = Pnt ;  2 ; -1 ; 0
+                    PointX = -3090 ; -3150 ; -3150
+                    PointY = 1875 ; 1875 ; 1350
+                    }
+                Line
+                    {
+                    Source = Pnt ;  2 ; -1 ; 0
+                    Sink = Cmp ;  3 ;  2 ; -1
+                    PointX = -3150 ; -5550 ; -5550 ; -5115
+                    PointY = 1350 ; 1350 ; 675 ; 675
+                    }
+                Line
+                    {
+                    Source = Prt ;  2 ; 0 ; -1
+                    Sink = Pnt ;  3 ; -1 ; 0
+                    PointX = 510 ; 510 ; 150
+                    PointY = 600 ; 600 ; 600
+                    }
+                Line
+                    {
+                    Source = Pnt ;  3 ; -1 ; 0
+                    Sink = Cmp ;  1 ;  2 ; -1
+                    PointX = 150 ; 150 ; -3450 ; -3450 ; -3240
+                    PointY = 600 ; -225 ; -225 ; 675 ; 675
+                    }
+                }
+            }
+                Atomic
+                    {
+                    Name = int2float
+                    Ports = 1 ; 1
+                    Path = userdevs/elevatordevs/src/aux/int2float.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -11280 ; 1140
+                        Dimension = 675 ; 720
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Atomic
+                    {
+                    Name = int2float0
+                    Ports = 1 ; 1
+                    Path = userdevs/elevatordevs/src/aux/int2float.h
+                    Description = Atomic DEVS model
+                    Graphic
+                        {
+                        Position = -11205 ; -435
+                        Dimension = 675 ; 720
+                        Direction = Right
+                        Color = 15
+                        Icon = None
+                        }
+                    Parameters
+                        {
+                        }
+                    }
+                Coupled
+                    {
+                    Type = Coordinator
+                    Name = Sistema2
+                    Ports = 1; 3
+                    Description = Coupled DEVS model
+                    Graphic
+                        {
+                        Position = -14805; 2715
+                        Dimension = 675; 720
+                        Direction = Right
+                        Color = 15
+                        Icon = %basicelements%coupled.svg
+                        Window = 5000; 5000; 5000; 5000
+                        }
+                    Parameters
+                        {
+                        }
+                    System
+                        {
+                        Inport
+                            {
+                            Name = Inport0
+                            CoupledPort = 1
+                            Description = 
+                            Graphic
+                                {
+                                Position = -7065 ; 375
+                                Dimension = 480
+                                Direction = Right
+                                }
+                            }
+                        Outport
+                            {
+                            Name = Outport0
+                            CoupledPort = 1
+                            Description = 
+                            Graphic
+                                {
+                                Position = 660 ; 600
+                                Dimension = 480
+                                Direction = Right
+                                }
+                            }
+                        Outport
+                            {
+                            Name = Outport1
+                            CoupledPort = 2
+                            Description = 
+                            Graphic
+                                {
+                                Position = -2940 ; 1875
+                                Dimension = 480
+                                Direction = Right
+                                }
+                            }
+                        Outport
+                            {
+                            Name = Outport2
+                            CoupledPort = 3
+                            Description = 
+                            Graphic
+                                {
+                                Position = -4890 ; -750
+                                Dimension = 480
+                                Direction = Right
+                                }
+                            }
+                        Atomic
+                            {
+                            Name = Controlador
+                            Ports = 2 ; 2
+                            Path = userdevs/elevatordevs/src/controlador.h
+                            Description = Atomic DEVS model
+                            Graphic
+                                {
+                                Position = -3105 ; 195
+                                Dimension = 675 ; 675
+                                Direction = Right
+                                Color = 15
+                                Icon = None
+                                }
+                            Parameters
+                                {
+                                }
+                            }
+                        Atomic
+                            {
+                            Name = Ascensor
+                            Ports = 1 ; 1
+                            Path = userdevs/elevatordevs/src/ascensor.h
+                            Description = Atomic DEVS model
+                            Graphic
+                                {
+                                Position = -855 ; 240
+                                Dimension = 675 ; 720
+                                Direction = Right
+                                Color = 15
+                                Icon = None
+                                }
+                            Parameters
+                                {
+                                vc = Str; 1 ; 
+                                altPiso = Str; 2 ; 
+                                }
+                            }
+                        Atomic
+                            {
+                            Name = Tablero
+                            Ports = 2 ; 1
+                            Path = userdevs/elevatordevs/src/tablero.h
+                            Description = Atomic DEVS model
+                            Graphic
+                                {
+                                Position = -4980 ; 195
+                                Dimension = 675 ; 675
+                                Direction = Right
+                                Color = 15
+                                Icon = None
+                                }
+                            Parameters
+                                {
+                                }
+                            }
+                        Point
+                            {
+                            ConectedLines = 2 ; 6 ; 7
+                            ConectedExtrems = Org ; Org ; Org
+                            Position = -3750 ; 375
+                            }
+                        Point
+                            {
+                            ConectedLines = 3 ; 8 ; 9
+                            ConectedExtrems = Org ; Org ; Org
+                            Position = -3150 ; 1350
+                            }
+                        Point
+                            {
+                            ConectedLines = 5 ; 10 ; 11
+                            ConectedExtrems = Org ; Org ; Org
+                            Position = 150 ; 600
+                            }
+                        Line
+                            {
+                            Source = Prt ;  1 ;  1 ; 0
+                            Sink = Cmp ;  3 ;  1 ; -1
+                            PointX = -6450 ; -6450 ; -5115
+                            PointY = 375 ; 375 ; 375
+                            }
+                        Line
+                            {
+                            Source = Cmp ;  3 ;  1 ; 0
+                            Sink = Pnt ;  1 ; -1 ; 0
+                            PointX = -4200 ; -4200 ; -3750
+                            PointY = 525 ; 375 ; 375
+                            }
+                        Line
+                            {
+                            Source = Cmp ;  1 ;  2 ; 0
+                            Sink = Pnt ;  2 ; -1 ; 0
+                            PointX = -2325 ; -1875 ; -1875 ; -3150
+                            PointY = 675 ; 675 ; 1350 ; 1350
+                            }
+                        Line
+                            {
+                            Source = Cmp ;  1 ;  1 ; 0
+                            Sink = Cmp ;  2 ;  1 ; -1
+                            PointX = -2325 ; -2325 ; -1575 ; -1575 ; -990
+                            PointY = 375 ; 375 ; 375 ; 600 ; 600
+                            }
+                        Line
+                            {
+                            Source = Cmp ;  2 ;  1 ; 0
+                            Sink = Pnt ;  3 ; -1 ; 0
+                            PointX = -75 ; -75 ; 150
+                            PointY = 600 ; 600 ; 600
+                            }
+                        Line
+                            {
+                            Source = Prt ;  4 ; 0 ; -1
+                            Sink = Pnt ;  1 ; -1 ; 0
+                            PointX = -5040 ; -5250 ; -5250 ; -3750 ; -3750
+                            PointY = -750 ; -750 ; 0 ; 0 ; 375
+                            }
+                        Line
+                            {
+                            Source = Pnt ;  1 ; -1 ; 0
+                            Sink = Cmp ;  1 ;  1 ; -1
+                            PointX = -3750 ; -3240 ; -3240
+                            PointY = 375 ; 375 ; 375
+                            }
+                        Line
+                            {
+                            Source = Prt ;  3 ; 0 ; -1
+                            Sink = Pnt ;  2 ; -1 ; 0
+                            PointX = -3090 ; -3150 ; -3150
+                            PointY = 1875 ; 1875 ; 1350
+                            }
+                        Line
+                            {
+                            Source = Pnt ;  2 ; -1 ; 0
+                            Sink = Cmp ;  3 ;  2 ; -1
+                            PointX = -3150 ; -5550 ; -5550 ; -5115
+                            PointY = 1350 ; 1350 ; 675 ; 675
+                            }
+                        Line
+                            {
+                            Source = Prt ;  2 ; 0 ; -1
+                            Sink = Pnt ;  3 ; -1 ; 0
+                            PointX = 510 ; 510 ; 150
+                            PointY = 600 ; 600 ; 600
+                            }
+                        Line
+                            {
+                            Source = Pnt ;  3 ; -1 ; 0
+                            Sink = Cmp ;  1 ;  2 ; -1
+                            PointX = 150 ; 150 ; -3450 ; -3450 ; -3240
+                            PointY = 600 ; -225 ; -225 ; 675 ; 675
+                            }
+                        }
+                    }
+                        Atomic
+                            {
+                            Name = int2float1
+                            Ports = 1 ; 1
+                            Path = userdevs/elevatordevs/src/aux/int2float.h
+                            Description = Atomic DEVS model
+                            Graphic
+                                {
+                                Position = -11280 ; 2490
+                                Dimension = 675 ; 720
+                                Direction = Right
+                                Color = 15
+                                Icon = None
+                                }
+                            Parameters
+                                {
+                                }
+                            }
+                        Atomic
+                            {
+                            Name = int2float2
+                            Ports = 1 ; 1
+                            Path = userdevs/elevatordevs/src/aux/int2float.h
+                            Description = Atomic DEVS model
+                            Graphic
+                                {
+                                Position = -11280 ; 4365
+                                Dimension = 675 ; 720
+                                Direction = Right
+                                Color = 15
+                                Icon = None
+                                }
+                            Parameters
+                                {
+                                }
+                            }
+                        Coupled
+                            {
+                            Type = Coordinator
+                            Name = Distribuidor3
+                            Ports = 2; 2
+                            Description = Coupled DEVS model
+                            Graphic
+                                {
+                                Position = -17835; 1485
+                                Dimension = 1320; 1380
+                                Direction = Right
+                                Color = 15
+                                Icon = %basicelements%coupled.svg
+                                Window = 5000; 5000; 5000; 5000
+                                }
+                            Parameters
+                                {
+                                }
+                            System
+                                {
+                                Inport
+                                    {
+                                    Name = Inport0
+                                    CoupledPort = 1
+                                    Description = 
+                                    Graphic
+                                        {
+                                        Position = -12015 ; -4050
+                                        Dimension = 480
+                                        Direction = Right
+                                        }
+                                    }
+                                Inport
+                                    {
+                                    Name = Inport1
+                                    CoupledPort = 2
+                                    Description = 
+                                    Graphic
+                                        {
+                                        Position = -11940 ; -2325
+                                        Dimension = 480
+                                        Direction = Right
+                                        }
+                                    }
+                                Outport
+                                    {
+                                    Name = Outport0
+                                    CoupledPort = 1
+                                    Description = 
+                                    Graphic
+                                        {
+                                        Position = -6015 ; -4050
+                                        Dimension = 480
+                                        Direction = Right
+                                        }
+                                    }
+                                Outport
+                                    {
+                                    Name = Outport1
+                                    CoupledPort = 2
+                                    Description = 
+                                    Graphic
+                                        {
+                                        Position = -6015 ; -2100
+                                        Dimension = 480
+                                        Direction = Right
+                                        }
+                                    }
+                                Atomic
+                                    {
+                                    Name = Manager1
+                                    Ports = 2 ; 2
+                                    Path = userdevs/elevatordevs/src/manager.h
+                                    Description = Administra el comportamiento del sistema 1.\n\nInput0: Pedido del generador.\nInput1: Pedido asignado por el comparador\n\nOutput0: Nodo con tiempo y piso pedido al comparador\nOutput1: Piso para despachar al sistmema
+                                    Graphic
+                                        {
+                                        Position = -9930 ; -4455
+                                        Dimension = 675 ; 675
+                                        Direction = Right
+                                        Color = 15
+                                        Icon = None
+                                        }
+                                    Parameters
+                                        {
+                                        }
+                                    }
+                                Atomic
+                                    {
+                                    Name = Comparador
+                                    Ports = 2 ; 2
+                                    Path = userdevs/elevatordevs/src/comparador.h
+                                    Description = Recibe el tiempo estimado de un pedido para cada sistema y decide a cual enviarlo
+                                    Graphic
+                                        {
+                                        Position = -8280 ; -3255
+                                        Dimension = 975 ; 675
+                                        Direction = Right
+                                        Color = 15
+                                        Icon = None
+                                        }
+                                    Parameters
+                                        {
+                                        }
+                                    }
+                                }
+                            }
+                                Line
+                                    {
+                                    Source = Cmp ;  3 ;  1 ; 0
+                                    Sink = Cmp ;  4 ;  1 ; -1
+                                    PointX = -14025 ; -11415 ; -11415
+                                    PointY = 1425 ; 1425 ; 1500
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  4 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  2 ; -1
+                                    PointX = -10500 ; -10500 ; -10065
+                                    PointY = 1500 ; 1500 ; 1500
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  5 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  1 ; -1
+                                    PointX = -10425 ; -10065 ; -10065
+                                    PointY = -75 ; -75 ; 600
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  6 ;  1 ; 0
+                                    Sink = Cmp ;  7 ;  1 ; -1
+                                    PointX = -14025 ; -14025 ; -11415
+                                    PointY = 2850 ; 2850 ; 2850
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  7 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  3 ; -1
+                                    PointX = -10500 ; -10500 ; -10065 ; -10065
+                                    PointY = 2850 ; 2400 ; 2400 ; 2250
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  8 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  4 ; -1
+                                    PointX = -10500 ; -10065 ; -10065
+                                    PointY = 4725 ; 4725 ; 3075
+                                    }
+        }
+    }
