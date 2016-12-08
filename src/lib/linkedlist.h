@@ -4,9 +4,12 @@
 class Node{ 
   public: 
 	int data;
+	double est_time; //Estimated time
 	Node* next; 
   public: 
+  	Node();
   	Node(int value); 
+  	Node(int value, double time); 
 };
 
 class LinkedList{ 
@@ -27,5 +30,6 @@ class LinkedList{
 		void prepend(int value); 
 		void remove(Node* node_ptr); 
 		void erase(int index); 
+		double total_time();
 };
 #endif
