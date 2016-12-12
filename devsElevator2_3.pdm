@@ -28,7 +28,7 @@ Coupled
             Description = Plot input signal using GnuPlot
             Graphic
                 {
-                Position = -9870 ; 150
+                Position = -9795 ; 450
                 Dimension = 4140 ; 3450
                 Direction = Right
                 Color = 15
@@ -583,11 +583,11 @@ Coupled
                             {
                             Type = Coordinator
                             Name = Distribuidor3
-                            Ports = 2; 2
-                            Description = Coupled DEVS model
+                            Ports = 3; 2
+                            Description = Distribuidor segun tiempo estimado para cada pedio\n\nInput0: Pedido del generador\nInput1: Libre/Ocupado del sistema 1\nInput2: Libre/Ocupado del sistema 2\n\nOutput0: Pedidos despachados al sistema 1\nOutput1: Pedidos despachados al sistema 2
                             Graphic
                                 {
-                                Position = -17835; 1485
+                                Position = -17835; 1635
                                 Dimension = 1320; 1380
                                 Direction = Right
                                 Color = 15
@@ -606,7 +606,7 @@ Coupled
                                     Description = 
                                     Graphic
                                         {
-                                        Position = -12015 ; -4050
+                                        Position = -11640 ; -2700
                                         Dimension = 480
                                         Direction = Right
                                         }
@@ -618,7 +618,7 @@ Coupled
                                     Description = 
                                     Graphic
                                         {
-                                        Position = -11940 ; -2325
+                                        Position = -11715 ; -4050
                                         Dimension = 480
                                         Direction = Right
                                         }
@@ -630,7 +630,7 @@ Coupled
                                     Description = 
                                     Graphic
                                         {
-                                        Position = -6015 ; -4050
+                                        Position = -5940 ; -3975
                                         Dimension = 480
                                         Direction = Right
                                         }
@@ -642,7 +642,19 @@ Coupled
                                     Description = 
                                     Graphic
                                         {
-                                        Position = -6015 ; -2100
+                                        Position = -6015 ; -1200
+                                        Dimension = 480
+                                        Direction = Right
+                                        }
+                                    }
+                                Inport
+                                    {
+                                    Name = Inport2
+                                    CoupledPort = 3
+                                    Description = 
+                                    Graphic
+                                        {
+                                        Position = -11640 ; -1200
                                         Dimension = 480
                                         Direction = Right
                                         }
@@ -650,9 +662,9 @@ Coupled
                                 Atomic
                                     {
                                     Name = Manager1
-                                    Ports = 2 ; 2
+                                    Ports = 3 ; 2
                                     Path = userdevs/elevatordevs/src/manager.h
-                                    Description = Administra el comportamiento del sistema 1.\n\nInput0: Pedido del generador.\nInput1: Pedido asignado por el comparador\n\nOutput0: Nodo con tiempo y piso pedido al comparador\nOutput1: Piso para despachar al sistmema
+                                    Description = Administra el comportamiento del sistema 1.\n\nInput0: Pedido del generador.\nInput1: Pedido asignado por el comparador\nInput2: Libre/Ocupado enviado por el sistema\n\nOutput0: Nodo con tiempo y piso pedido al comparador\nOutput1: Piso para despachar al sistmema
                                     Graphic
                                         {
                                         Position = -9930 ; -4455
@@ -683,6 +695,41 @@ Coupled
                                         {
                                         }
                                     }
+                                Line
+                                    {
+                                    Source = Cmp ;  1 ;  1 ; 0
+                                    Sink = Cmp ;  2 ;  1 ; -1
+                                    PointX = -9150 ; -8415 ; -8415
+                                    PointY = -4275 ; -4275 ; -3075
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  1 ;  2 ; 0
+                                    Sink = Prt ;  3 ;  1 ; -1
+                                    PointX = -9150 ; -9150 ; -6090
+                                    PointY = -3975 ; -3975 ; -3975
+                                    }
+                                Line
+                                    {
+                                    Source = Prt ;  1 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  1 ; -1
+                                    PointX = -11025 ; -10500 ; -10500 ; -10065
+                                    PointY = -2700 ; -2700 ; -4275 ; -4275
+                                    }
+                                Line
+                                    {
+                                    Source = Prt ;  2 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  3 ; -1
+                                    PointX = -11100 ; -11025 ; -11025 ; -10065
+                                    PointY = -4050 ; -4050 ; -3900 ; -3900
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  2 ;  1 ; 0
+                                    Sink = Cmp ;  1 ;  2 ; -1
+                                    PointX = -7200 ; -7125 ; -7125 ; -10275 ; -10275 ; -10065
+                                    PointY = -3075 ; -3075 ; -4875 ; -4875 ; -4125 ; -4125
+                                    }
                                 }
                             }
                                 Line
@@ -696,15 +743,15 @@ Coupled
                                     {
                                     Source = Cmp ;  4 ;  1 ; 0
                                     Sink = Cmp ;  1 ;  2 ; -1
-                                    PointX = -10500 ; -10500 ; -10065
-                                    PointY = 1500 ; 1500 ; 1500
+                                    PointX = -10500 ; -9990 ; -9990
+                                    PointY = 1500 ; 1500 ; 1800
                                     }
                                 Line
                                     {
                                     Source = Cmp ;  5 ;  1 ; 0
                                     Sink = Cmp ;  1 ;  1 ; -1
-                                    PointX = -10425 ; -10065 ; -10065
-                                    PointY = -75 ; -75 ; 600
+                                    PointX = -10425 ; -9990 ; -9990
+                                    PointY = -75 ; -75 ; 900
                                     }
                                 Line
                                     {
@@ -717,15 +764,64 @@ Coupled
                                     {
                                     Source = Cmp ;  7 ;  1 ; 0
                                     Sink = Cmp ;  1 ;  3 ; -1
-                                    PointX = -10500 ; -10500 ; -10065 ; -10065
-                                    PointY = 2850 ; 2400 ; 2400 ; 2250
+                                    PointX = -10500 ; -9990 ; -9990
+                                    PointY = 2850 ; 2850 ; 2550
                                     }
                                 Line
                                     {
                                     Source = Cmp ;  8 ;  1 ; 0
                                     Sink = Cmp ;  1 ;  4 ; -1
-                                    PointX = -10500 ; -10065 ; -10065
-                                    PointY = 4725 ; 4725 ; 3075
+                                    PointX = -10500 ; -9990 ; -9990
+                                    PointY = 4725 ; 4725 ; 3375
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  9 ;  1 ; 0
+                                    Sink = Cmp ;  3 ;  1 ; -1
+                                    PointX = -16350 ; -16350 ; -14940
+                                    PointY = 2025 ; 1650 ; 1650
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  9 ;  2 ; 0
+                                    Sink = Cmp ;  6 ;  1 ; -1
+                                    PointX = -16350 ; -16350 ; -16350 ; -14940
+                                    PointY = 2625 ; 2625 ; 3075 ; 3075
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  3 ;  2 ; 0
+                                    Sink = Cmp ;  9 ;  2 ; -1
+                                    PointX = -14025 ; -13650 ; -13650 ; -18450 ; -18450 ; -18015
+                                    PointY = 1650 ; 1650 ; 1125 ; 1125 ; 2325 ; 2325
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  6 ;  2 ; 0
+                                    Sink = Cmp ;  9 ;  3 ; -1
+                                    PointX = -14025 ; -13575 ; -13575 ; -18450 ; -18450 ; -18015
+                                    PointY = 3075 ; 3075 ; 3825 ; 3825 ; 2700 ; 2700
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  2 ;  1 ; 0
+                                    Sink = Cmp ;  9 ;  1 ; -1
+                                    PointX = -18375 ; -18150 ; -18150 ; -18015
+                                    PointY = 0 ; 0 ; 1875 ; 1875
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  9 ;  1 ; 0
+                                    Sink = Cmp ;  5 ;  1 ; -1
+                                    PointX = -16350 ; -16350 ; -16350 ; -11340
+                                    PointY = 2025 ; 2025 ; -75 ; -75
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  9 ;  2 ; 0
+                                    Sink = Cmp ;  8 ;  1 ; -1
+                                    PointX = -16350 ; -16350 ; -16350 ; -11415
+                                    PointY = 2625 ; 2625 ; 4725 ; 4725
                                     }
         }
     }
