@@ -17,12 +17,24 @@ class manager: public Simulator {
 
 #define INF 1e20;
 
-LinkedList *ps;
+//Cola de pedidos
+LinkedList *ps; 
+
+//tiempo para completar 
+//el pedido actual
+double timeAct; 
+
 double sigma;
 
-Node* out;
+//Puerto de ingreso para
+//decidir que funcion realizar
+int inport;
 
-int ped;
+//Salida (pedido, t.estimado)
+Node* out; 
+
+//Pedido recibido
+int ped; 
 public:
 	manager(const char *n): Simulator(n) {};
 	void init(double, ...);

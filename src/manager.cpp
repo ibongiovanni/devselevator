@@ -8,13 +8,18 @@ va_start(parameters,t);
 //      %Name% is the parameter name
 //	%Type% is the parameter type
 
+ps = new LinkedList();
+
+sigma=INF;
+timeAct=INF;
 }
 double manager::ta(double t) {
 //This function returns a double.
-
+return sigma;
 }
 void manager::dint(double t) {
 
+sigma=INF;
 }
 void manager::dext(Event x, double t) {
 //The input event is in the 'x' variable.
@@ -23,6 +28,7 @@ void manager::dext(Event x, double t) {
 //     'x.port' is the port number
 //     'e' is the time elapsed since last transition
 
+timeAct = timeAct-e;
 }
 Event manager::lambda(double t) {
 //This function returns an Event:
