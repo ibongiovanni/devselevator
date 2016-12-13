@@ -30,6 +30,7 @@ class LinkedList{
 		void prepend(int value); 
 		void remove(Node* node_ptr); 
 		void erase(int index); 
-		double total_time();
+		double total_time() const;
+		int last_ped() const;
 };
 #endif

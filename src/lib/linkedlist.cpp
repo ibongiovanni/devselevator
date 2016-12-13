@@ -6,7 +6,14 @@
 using namespace std;
 
 Node::Node(int value) {
-	this->data = value; 
+	this->data = value;
+	this->est_time=0; 
+	this->next = NULL;
+}
+
+Node::Node(int value, double time) {
+	this->data = value;
+	this->est_time=time; 
 	this->next = NULL;
 }
 
@@ -141,5 +148,18 @@ void LinkedList::erase(int index) {
 		delete node_ptr;
 	}
 	length--;
+}
+
+double LinkedList::total_time() const{
+	double sum=0;
+	Node* prev_ptr=NULL; 
+	for (node_ptr=this->head; node_ptr != NULL; node_ptr=node_ptr->next) {
+		sum += node_ptr->est_time;
+	}
+	return sum;
+}
+
+int LinkedList::last_ped() const{
+	return at(length-1);
 }
 
