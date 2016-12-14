@@ -30,14 +30,14 @@ void comparador::dext(Event x, double t) {
 //     'x.value' is the value (pointer to void)
 //     'x.port' is the port number
 //     'e' is the time elapsed since last transition
-
+printLog("(-- dexr COMPARADOR \t\t\t");
 Node** aux;
 aux = (Node**)(x.value);
 printLog("t= %2.2f\t",t);
 
 
 if (x.port==0) { //
-	 printLog("COMPARADOR: recibi un mensaje del manager1= %d",aux[0]->est_time);
+	 printLog("COMPARADOR: recibi un mensaje del manager1= %2.2f",aux[0]->est_time);
 
 	ts1=aux[0];
 	if (ts2==NULL){
@@ -48,7 +48,7 @@ if (x.port==0) { //
 	}
 }
 else{ //
-	 printLog("COMPARADOR: recibi un mensaje del manager2= %d",aux[0]->est_time);
+	 printLog("COMPARADOR: recibi un mensaje del manager2= %2.2f",aux[0]->est_time);
 
 	ts2=aux[0];
 	if (ts1==NULL){
@@ -58,7 +58,7 @@ else{ //
 		sigma=0;
 	}
 }
-
+printLog("\t --) \n");
 }
 Event comparador::lambda(double t) {
 //This function returns an Event:
@@ -66,7 +66,8 @@ Event comparador::lambda(double t) {
 //where:
 //     %&Value% points to the variable which contains the value.
 //     %NroPort% is the port number (from 0 to n-1)
-
+printLog("(-- lambda COMPARADOR \t\t\t");
+printLog("t= %2.2f\t",t);
 int port=0;
 if ( ts2->est_time < ts1->est_time ){
 	out = new Node(ts2->data, ts2->est_time);
@@ -75,7 +76,8 @@ if ( ts2->est_time < ts1->est_time ){
 else{
 	out = new Node(ts1->data, ts1->est_time);
 }
-
+	printLog("COMPARADOR: ts1: %2.2f, ts2: %2.2f, se lo envio al %d",ts1->est_time,ts2->est_time,port+1);
+	printLog("\t --) \n");
 return Event(&out,port);
 }
 void comparador::exit() {
