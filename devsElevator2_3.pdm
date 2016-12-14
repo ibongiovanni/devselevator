@@ -62,7 +62,7 @@ Coupled
             Parameters
                 {
                 lambda = Str; 0.111 ; lambda parameter for exponetial distribution
-                s = Str; 123456 ; Seed
+                s = Str; 156165165 ; Seed
                 }
             }
         Coupled
@@ -642,7 +642,7 @@ Coupled
                                     Description = 
                                     Graphic
                                         {
-                                        Position = -6015 ; -1200
+                                        Position = -5865 ; -1050
                                         Dimension = 480
                                         Direction = Right
                                         }
@@ -695,6 +695,24 @@ Coupled
                                         {
                                         }
                                     }
+                                Atomic
+                                    {
+                                    Name = Manager2
+                                    Ports = 3 ; 2
+                                    Path = userdevs/elevatordevs/src/manager.h
+                                    Description = Administra el comportamiento del sistema 2.\n\nInput0: Pedido del generador.\nInput1: Pedido asignado por el comparador\nInput2: Libre/Ocupado enviado por el sistema\n\nOutput0: Nodo con tiempo y piso pedido al comparador\nOutput1: Piso para despachar al sistmema
+                                    Graphic
+                                        {
+                                        Position = -9855 ; -1530
+                                        Dimension = 675 ; 675
+                                        Direction = Right
+                                        Color = 15
+                                        Icon = None
+                                        }
+                                    Parameters
+                                        {
+                                        }
+                                    }
                                 Line
                                     {
                                     Source = Cmp ;  1 ;  1 ; 0
@@ -713,8 +731,8 @@ Coupled
                                     {
                                     Source = Prt ;  1 ;  1 ; 0
                                     Sink = Cmp ;  1 ;  1 ; -1
-                                    PointX = -11025 ; -10500 ; -10500 ; -10065
-                                    PointY = -2700 ; -2700 ; -4275 ; -4275
+                                    PointX = -11025 ; -11025 ; -10500 ; -10500 ; -10065
+                                    PointY = -2700 ; -2700 ; -2700 ; -4275 ; -4275
                                     }
                                 Line
                                     {
@@ -729,6 +747,41 @@ Coupled
                                     Sink = Cmp ;  1 ;  2 ; -1
                                     PointX = -7200 ; -7125 ; -7125 ; -10275 ; -10275 ; -10065
                                     PointY = -3075 ; -3075 ; -4875 ; -4875 ; -4125 ; -4125
+                                    }
+                                Line
+                                    {
+                                    Source = Prt ;  1 ;  1 ; 0
+                                    Sink = Cmp ;  3 ;  1 ; -1
+                                    PointX = -11025 ; -10500 ; -10500 ; -9990
+                                    PointY = -2700 ; -2700 ; -1350 ; -1350
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  2 ;  2 ; 0
+                                    Sink = Cmp ;  3 ;  2 ; -1
+                                    PointX = -7200 ; -7200 ; -10200 ; -10200 ; -9990
+                                    PointY = -2775 ; 0 ; 0 ; -1200 ; -1200
+                                    }
+                                Line
+                                    {
+                                    Source = Prt ;  5 ;  1 ; 0
+                                    Sink = Cmp ;  3 ;  3 ; -1
+                                    PointX = -11025 ; -10950 ; -10950 ; -9990
+                                    PointY = -1200 ; -1200 ; -975 ; -975
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  3 ;  1 ; 0
+                                    Sink = Cmp ;  2 ;  2 ; -1
+                                    PointX = -9075 ; -8415 ; -8415
+                                    PointY = -1350 ; -1350 ; -2775
+                                    }
+                                Line
+                                    {
+                                    Source = Cmp ;  3 ;  2 ; 0
+                                    Sink = Prt ;  4 ;  1 ; -1
+                                    PointX = -9075 ; -9075 ; -6015
+                                    PointY = -1050 ; -1050 ; -1050
                                     }
                                 }
                             }
