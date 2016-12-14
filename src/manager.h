@@ -8,6 +8,7 @@
 #include "stdarg.h"
 
 #include "lib/linkedlist.h"
+#include "math.h"
 
 
 class manager: public Simulator { 
@@ -24,11 +25,19 @@ LinkedList *ps;
 //el pedido actual
 double timeAct; 
 
+//Estado ascensor
+int est;
+
+//Ultimo piso
+int last_floor;
+
 double sigma;
 
 //Puerto de ingreso para
 //decidir que funcion realizar
 int inport;
+
+int outport;
 
 //Salida (pedido, t.estimado)
 Node* out; 
