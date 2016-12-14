@@ -26,11 +26,12 @@ class LinkedList{
 		int at(int index); 
 		Node* find(int value) const; 
 		bool contains(int value) const; 
-		void append(int value); 
+		void append(int value);
+		void append_node(Node* nod); 
 		void prepend(int value); 
 		void remove(Node* node_ptr); 
 		void erase(int index); 
 		double total_time() const;
-		int last_ped() const;
+		int last_ped() ;
 };
 #endif

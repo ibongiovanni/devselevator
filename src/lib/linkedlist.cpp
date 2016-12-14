@@ -101,6 +101,20 @@ void LinkedList::append(int value) {
 	this->length++;
 }
 
+void LinkedList::append_node(Node* nod){
+	if (this->head == NULL) { 
+		this->head = nod; 
+	} 
+	else { 
+		Node *last_node=NULL; 
+		for (Node *node_ptr=this->head; node_ptr != NULL; node_ptr=node_ptr->next) { 
+			last_node = node_ptr; 
+		}
+		last_node->next = nod; 
+	}
+	this->length++;	
+}
+
 void LinkedList::prepend(int value) { 
 	Node *new_node=new Node(value); 
 	new_node->next = this->head; 
@@ -152,14 +166,15 @@ void LinkedList::erase(int index) {
 
 double LinkedList::total_time() const{
 	double sum=0;
-	Node* prev_ptr=NULL; 
+	Node* node_ptr=NULL; 
 	for (node_ptr=this->head; node_ptr != NULL; node_ptr=node_ptr->next) {
 		sum += node_ptr->est_time;
 	}
-	return sum;
+	return sum*2;
 }
 
-int LinkedList::last_ped() const{
-	return at(length-1);
+int LinkedList::last_ped() {
+	int l = this->length;
+	return this->at(l-1);
 }
 
