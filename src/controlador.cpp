@@ -55,6 +55,7 @@ else{
 		msj = 2; 
 		sigma = 0;
 		lastMsjAsc=aux[0];
+		printLog("- llego al destino ",aux[0]);
 	}
 	else {
 		piso = aux[0]; 

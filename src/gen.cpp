@@ -12,6 +12,7 @@ char *fvar= va_arg(parameters,char*);
 lam=getScilabVar(fvar );
 fvar= va_arg(parameters,char*);
 int seed = (strlen(fvar)==0 ? (int)time(0)+rand() : getScilabVar(fvar)); // random seed
+printLog("GENERADOR: La semeilla es= %d\n",seed);
 s=0;
 for (int i=0;i<10;i++)y[i]=0;
 RanGen = new CRandomMersenne(seed);
