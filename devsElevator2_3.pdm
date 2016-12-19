@@ -62,7 +62,7 @@ Coupled
             Parameters
                 {
                 lambda = Str; 0.111 ; lambda parameter for exponetial distribution
-                s = Str; 156165165 ; Seed
+                s = Str; 741258963 ; Seed
                 }
             }
         Coupled
