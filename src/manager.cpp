@@ -25,10 +25,11 @@ sigma=INF;
 
 if (outport==1){
 	timeAct= (double) abs(ped-last_floor)*2;
+	last_floor=ped;
 }
 
 printLog("t= %2.2f\t",t);
-printLog("MANAGER: el puerto de salida fue: %d, timeAct: %2.2f",outport,timeAct);
+printLog("MANAGER: el puerto de salida fue: %d, timeAct: %2.2f, ped: %d, last_floor: %d",outport,timeAct,ped,last_floor);
 
 printLog("\t --) \n");
 }
@@ -40,7 +41,7 @@ void manager::dext(Event x, double t) {
 //     'e' is the time elapsed since last transition
 printLog("(-- dext MANAGER \t\t\t");
 printLog("t= %2.2f\t",t);
-if (timeAct>e){
+if (timeAct>e){ //Actualiza el tiempo de uso restante
 	timeAct = timeAct-e;
 }
 else{
@@ -64,7 +65,7 @@ if (x.port== 1) { //Recibe un nodo del comparador
 		sigma=0;
 		outport=1;
 		ped=aux[0]->data;
-		last_floor=ped;
+		//last_floor=ped;
 		printLog("MANAGER: Recibi un nodo y debo enviarlo (%d,%2.2f)",ped,aux[0]->est_time);
 	}
 	else {
@@ -89,7 +90,7 @@ if (x.port == 2){ //Recibe un libre/ocupado del sistema
 			sigma=0;
 			outport=1;
 			ped = ps->at(0);
-			last_floor=ped;
+			//last_floor=ped;
 			ps->erase(0);
 		}
 	}
@@ -108,13 +109,13 @@ printLog("(-- lambda MANAGER \t\t\t");
 printLog("t= %2.2f\t",t);
 if (outport==0){
 	double ttotal=0;
-	ttotal+=timeAct;
-	ttotal+=ps->total_time();
+	ttotal+=timeAct; //Tiempo en completar el pedido actual
+	ttotal+=ps->total_time(); //Tiempo total en la cola
 	double prev_floor; //De donde parte el ascensor
-		if (ps->empty()){		prev_floor=(double)last_floor; }
-		else { 						prev_floor = ps->last_ped(); }	
-	int dist_pisos = abs(prev_floor-ped);
-	ttotal += (double) dist_pisos*2;
+		if (ps->empty()){		prev_floor=(double)last_floor; } //Si no hay pedidos en la cola
+		else { 						prev_floor = ps->last_ped(); }	 //Si hay pedidos en la cola
+	int dist_pisos = abs(prev_floor-ped); //Diferencia entre el piso al que quiere ir y el piso del que parte
+	ttotal += (double) dist_pisos*2; //distancia por el tiempo que tarda en hacer cada piso
 	printLog("\n\t timeAct: %2.2f \n\t dist_pisos: %2.2f \n\t ps.total_time: %2.2f \n\t\t\t",timeAct,(double)dist_pisos,ps->total_time());
 	out = new Node(ped,ttotal);
 	printLog("MANAGER: Envio un nodo: (%d,%2.2f) al comparador", out->data, out->est_time);
