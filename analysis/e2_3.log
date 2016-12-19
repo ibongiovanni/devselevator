@@ -1,0 +1,1248 @@
+GENERADOR: La semeilla es= 741258963
+ASCENSOR: valores de parametros: vc= 1.00; altPiso= 2.00
+ASCENSOR: valores de parametros: vc= 1.00; altPiso= 2.00
+Simulation Initialized
+t= 0.00	GENERADOR: Va un pedido= 10
+(-- dext MANAGER 			t= 0.00	MANAGER: Recibi un pedido: 10	 --) 
+(-- dext MANAGER 			t= 0.00	MANAGER: Recibi un pedido: 10	 --) 
+(-- lambda MANAGER 			t= 0.00	
+	 timeAct: 0.00 
+	 dist_pisos: 9.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (10,18.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 0.00	COMPARADOR: recibi un mensaje del manager1= 18.00	 --) 
+(-- dint MANAGER 			t= 0.00	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 0.00	
+	 timeAct: 0.00 
+	 dist_pisos: 9.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (10,18.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 0.00	COMPARADOR: recibi un mensaje del manager2= 18.00	 --) 
+(-- dint MANAGER 			t= 0.00	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 0.00	COMPARADOR: ts1: 18.00, ts2: 18.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 0.00	MANAGER: Recibi un nodo y debo enviarlo (10,18.00)	 --) 
+(-- lambda MANAGER 			t= 0.00	MANAGER: Envio un pedido: 10 al sistema	 --) 
+(-- dext TABLERO 			t= 0.00	TABLERO: recibi un pedido= 10	 --) 
+(-- dint MANAGER 			t= 0.00	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 0.00	TABLERO: mando un pedido al controlador= 10	 --) 
+(-- dext CONTROLADOR 		t= 0.00	CONTROLADOR: el tablero mando un= 10 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 0.00	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 0.00	ASCENSOR: me llego una orden= 0
+t= 0.00	ASCENSOR: estado: est= 0, h= 0.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 0.00	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 0.00	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 0.00	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 0.00	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 0.00	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 2.00	ASCENSOR: llegue al piso= 2, h: 0.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 2.00	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 2.00	ASCENSOR: voy a seguir subiendo,h= 2.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 4.00	ASCENSOR: llegue al piso= 3, h: 2.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 4.00	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 4.00	ASCENSOR: voy a seguir subiendo,h= 4.00, sigma= 2.00 	 --) 
+t= 5.69	GENERADOR: Va un pedido= 8
+(-- dext MANAGER 			t= 5.69	MANAGER: Recibi un pedido: 8	 --) 
+(-- dext MANAGER 			t= 5.69	MANAGER: Recibi un pedido: 8	 --) 
+(-- lambda MANAGER 			t= 5.69	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 5.69	COMPARADOR: recibi un mensaje del manager1= 4.00	 --) 
+(-- dint MANAGER 			t= 5.69	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 5.69	
+	 timeAct: 0.00 
+	 dist_pisos: 7.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,14.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 5.69	COMPARADOR: recibi un mensaje del manager2= 14.00	 --) 
+(-- dint MANAGER 			t= 5.69	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 5.69	COMPARADOR: ts1: 4.00, ts2: 14.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 5.69	MANAGER: Recibi un nodo y debo enviarlo (8,4.00)	 --) 
+(-- lambda MANAGER 			t= 5.69	MANAGER: Envio un pedido: 8 al sistema	 --) 
+(-- dext TABLERO 			t= 5.69	TABLERO: recibi un pedido= 8	 --) 
+(-- dint MANAGER 			t= 5.69	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 6.00	ASCENSOR: llegue al piso= 4, h: 4.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 6.00	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 6.00	ASCENSOR: voy a seguir subiendo,h= 6.00, sigma= 2.00 	 --) 
+t= 6.62	GENERADOR: Va un pedido= 5
+(-- dext MANAGER 			t= 6.62	MANAGER: Recibi un pedido: 5	 --) 
+(-- dext MANAGER 			t= 6.62	MANAGER: Recibi un pedido: 5	 --) 
+(-- lambda MANAGER 			t= 6.62	
+	 timeAct: 0.00 
+	 dist_pisos: 3.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,6.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 6.62	COMPARADOR: recibi un mensaje del manager1= 6.00	 --) 
+(-- dint MANAGER 			t= 6.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 6.62	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 6.62	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 6.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 6.62	COMPARADOR: ts1: 6.00, ts2: 8.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 6.62	MANAGER: Recibi un nodo y debo enviarlo (5,6.00)	 --) 
+(-- lambda MANAGER 			t= 6.62	MANAGER: Envio un pedido: 5 al sistema	 --) 
+(-- dext TABLERO 			t= 6.62	TABLERO: recibi un pedido= 5	 --) 
+(-- dint MANAGER 			t= 6.62	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 8.00	ASCENSOR: llegue al piso= 5, h: 6.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 8.00	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 8.00	ASCENSOR: voy a seguir subiendo,h= 8.00, sigma= 2.00 	 --) 
+t= 8.32	GENERADOR: Va un pedido= 7
+(-- dext MANAGER 			t= 8.32	MANAGER: Recibi un pedido: 7	 --) 
+(-- dext MANAGER 			t= 8.32	MANAGER: Recibi un pedido: 7	 --) 
+(-- lambda MANAGER 			t= 8.32	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (7,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 8.32	COMPARADOR: recibi un mensaje del manager1= 4.00	 --) 
+(-- dint MANAGER 			t= 8.32	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 8.32	
+	 timeAct: 0.00 
+	 dist_pisos: 6.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (7,12.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 8.32	COMPARADOR: recibi un mensaje del manager2= 12.00	 --) 
+(-- dint MANAGER 			t= 8.32	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 8.32	COMPARADOR: ts1: 4.00, ts2: 12.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 8.32	MANAGER: Recibi un nodo y debo enviarlo (7,4.00)	 --) 
+(-- lambda MANAGER 			t= 8.32	MANAGER: Envio un pedido: 7 al sistema	 --) 
+(-- dext TABLERO 			t= 8.32	TABLERO: recibi un pedido= 7	 --) 
+(-- dint MANAGER 			t= 8.32	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 10.00	ASCENSOR: llegue al piso= 6, h: 8.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 10.00	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 10.00	ASCENSOR: voy a seguir subiendo,h= 10.00, sigma= 2.00 	 --) 
+t= 11.14	GENERADOR: Va un pedido= 3
+(-- dext MANAGER 			t= 11.14	MANAGER: Recibi un pedido: 3	 --) 
+(-- dext MANAGER 			t= 11.14	MANAGER: Recibi un pedido: 3	 --) 
+(-- lambda MANAGER 			t= 11.14	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 11.14	COMPARADOR: recibi un mensaje del manager1= 8.00	 --) 
+(-- dint MANAGER 			t= 11.14	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 11.14	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 11.14	COMPARADOR: recibi un mensaje del manager2= 4.00	 --) 
+(-- dint MANAGER 			t= 11.14	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 11.14	COMPARADOR: ts1: 8.00, ts2: 4.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 11.14	MANAGER: Recibi un nodo y debo enviarlo (3,4.00)	 --) 
+(-- lambda MANAGER 			t= 11.14	MANAGER: Envio un pedido: 3 al sistema	 --) 
+(-- dext TABLERO 			t= 11.14	TABLERO: recibi un pedido= 3	 --) 
+(-- dint MANAGER 			t= 11.14	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 11.14	TABLERO: mando un pedido al controlador= 3	 --) 
+(-- dext CONTROLADOR 		t= 11.14	CONTROLADOR: el tablero mando un= 3 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 11.14	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 11.14	ASCENSOR: me llego una orden= 0
+t= 11.14	ASCENSOR: estado: est= 0, h= 0.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 11.14	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 11.14	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 11.14	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 11.14	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 11.14	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 12.00	ASCENSOR: llegue al piso= 7, h: 10.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 12.00	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 12.00	ASCENSOR: voy a seguir subiendo,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 13.14	ASCENSOR: llegue al piso= 2, h: 0.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 13.14	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 13.14	ASCENSOR: voy a seguir subiendo,h= 2.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 14.00	ASCENSOR: llegue al piso= 8, h: 12.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 14.00	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 14.00	ASCENSOR: voy a seguir subiendo,h= 14.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 15.14	ASCENSOR: llegue al piso= 3, h: 2.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 15.14	CONTROLADOR: el asensor mando un= 3 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 15.14	ASCENSOR: voy a seguir subiendo,h= 4.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 15.14	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 15.14	ASCENSOR: me llego una orden= 2
+t= 15.14	ASCENSOR: estado: est= 5, h= 4.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 15.14	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 15.14	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 15.14	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 15.14	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 15.14	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 15.14	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 15.14	ASCENSOR: voy a descansar,h= 4.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda ASCENSOR 		t= 16.00	ASCENSOR: llegue al piso= 9, h: 14.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 16.00	CONTROLADOR: el asensor mando un= 9 	 --) 
+(-- dint ASCENSOR 			t= 16.00	ASCENSOR: voy a seguir subiendo,h= 16.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 18.00	ASCENSOR: llegue al piso= 10, h: 16.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 18.00	CONTROLADOR: el asensor mando un= 10 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 18.00	ASCENSOR: voy a seguir subiendo,h= 18.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 18.00	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 18.00	ASCENSOR: me llego una orden= 2
+t= 18.00	ASCENSOR: estado: est= 5, h= 18.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 18.00	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 18.00	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 18.00	TABLERO: el controlador me mando un= 3. La cola es= [ 8 - 5 - 7 -  ]	 --) 
+(-- dext MANAGER 			t= 18.00	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 18.00	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 18.00	CONTROLADOR: el asensor mando un= 10 	 --) 
+(-- dint ASCENSOR 			t= 18.00	ASCENSOR: voy a descansar,h= 18.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 18.00	TABLERO: mando un pedido al controlador= 8	 --) 
+(-- dext CONTROLADOR 		t= 18.00	CONTROLADOR: el tablero mando un= 8 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 18.00	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 18.00	ASCENSOR: me llego una orden= 1
+t= 18.00	ASCENSOR: estado: est= 1, h= 18.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 18.00	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 18.00	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 18.00	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 18.00	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 18.00	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 20.00	ASCENSOR: llegue al piso= 9, h: 18.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 20.00	CONTROLADOR: el asensor mando un= 9 	 --) 
+(-- dint ASCENSOR 			t= 20.00	ASCENSOR: voy a seguir bajando,h= 16.00, sigma= 2.00 	 --) 
+t= 21.82	GENERADOR: Va un pedido= 8
+(-- dext MANAGER 			t= 21.82	MANAGER: Recibi un pedido: 8	 --) 
+(-- dext MANAGER 			t= 21.82	MANAGER: Recibi un pedido: 8	 --) 
+(-- lambda MANAGER 			t= 21.82	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 21.82	COMPARADOR: recibi un mensaje del manager1= 2.00	 --) 
+(-- dint MANAGER 			t= 21.82	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 21.82	
+	 timeAct: 0.00 
+	 dist_pisos: 5.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,10.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 21.82	COMPARADOR: recibi un mensaje del manager2= 10.00	 --) 
+(-- dint MANAGER 			t= 21.82	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 21.82	COMPARADOR: ts1: 2.00, ts2: 10.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 21.82	MANAGER: Recibi un nodo y debo enviarlo (8,2.00)	 --) 
+(-- lambda MANAGER 			t= 21.82	MANAGER: Envio un pedido: 8 al sistema	 --) 
+(-- dext TABLERO 			t= 21.82	TABLERO: recibi un pedido= 8	 --) 
+(-- dint MANAGER 			t= 21.82	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 22.00	ASCENSOR: llegue al piso= 8, h: 16.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 22.00	CONTROLADOR: el asensor mando un= 8 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 22.00	ASCENSOR: voy a seguir bajando,h= 14.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 22.00	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 22.00	ASCENSOR: me llego una orden= 2
+t= 22.00	ASCENSOR: estado: est= 6, h= 14.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 22.00	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 22.00	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 22.00	TABLERO: el controlador me mando un= 3. La cola es= [ 5 - 7 - 8 -  ]	 --) 
+(-- dext MANAGER 			t= 22.00	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 22.00	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 22.00	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 22.00	ASCENSOR: descansar,h= 14.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 22.00	TABLERO: mando un pedido al controlador= 5	 --) 
+(-- dext CONTROLADOR 		t= 22.00	CONTROLADOR: el tablero mando un= 5 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 22.00	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 22.00	ASCENSOR: me llego una orden= 1
+t= 22.00	ASCENSOR: estado: est= 1, h= 14.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 22.00	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 22.00	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 22.00	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 22.00	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 22.00	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 24.00	ASCENSOR: llegue al piso= 7, h: 14.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 24.00	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 24.00	ASCENSOR: voy a seguir bajando,h= 12.00, sigma= 2.00 	 --) 
+t= 25.56	GENERADOR: Va un pedido= 4
+(-- dext MANAGER 			t= 25.56	MANAGER: Recibi un pedido: 4	 --) 
+(-- dext MANAGER 			t= 25.56	MANAGER: Recibi un pedido: 4	 --) 
+(-- lambda MANAGER 			t= 25.56	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (4,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 25.56	COMPARADOR: recibi un mensaje del manager1= 8.00	 --) 
+(-- dint MANAGER 			t= 25.56	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 25.56	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (4,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 25.56	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 25.56	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 25.56	COMPARADOR: ts1: 8.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 25.56	MANAGER: Recibi un nodo y debo enviarlo (4,2.00)	 --) 
+(-- lambda MANAGER 			t= 25.56	MANAGER: Envio un pedido: 4 al sistema	 --) 
+(-- dext TABLERO 			t= 25.56	TABLERO: recibi un pedido= 4	 --) 
+(-- dint MANAGER 			t= 25.56	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 25.56	TABLERO: mando un pedido al controlador= 4	 --) 
+(-- dext CONTROLADOR 		t= 25.56	CONTROLADOR: el tablero mando un= 4 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 25.56	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 25.56	ASCENSOR: me llego una orden= 0
+t= 25.56	ASCENSOR: estado: est= 0, h= 4.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 25.56	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 25.56	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 25.56	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 25.56	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 25.56	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 26.00	ASCENSOR: llegue al piso= 6, h: 12.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 26.00	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 26.00	ASCENSOR: voy a seguir bajando,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 27.56	ASCENSOR: llegue al piso= 4, h: 4.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 27.56	CONTROLADOR: el asensor mando un= 4 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 27.56	ASCENSOR: voy a seguir subiendo,h= 6.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 27.56	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 27.56	ASCENSOR: me llego una orden= 2
+t= 27.56	ASCENSOR: estado: est= 5, h= 6.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 27.56	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 27.56	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 27.56	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 27.56	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 27.56	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 27.56	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 27.56	ASCENSOR: voy a descansar,h= 6.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda ASCENSOR 		t= 28.00	ASCENSOR: llegue al piso= 5, h: 10.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 28.00	CONTROLADOR: el asensor mando un= 5 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 28.00	ASCENSOR: voy a seguir bajando,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 28.00	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 28.00	ASCENSOR: me llego una orden= 2
+t= 28.00	ASCENSOR: estado: est= 6, h= 8.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 28.00	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 28.00	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 28.00	TABLERO: el controlador me mando un= 3. La cola es= [ 7 - 8 -  ]	 --) 
+(-- dext MANAGER 			t= 28.00	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 28.00	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 28.00	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 28.00	ASCENSOR: descansar,h= 8.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 28.00	TABLERO: mando un pedido al controlador= 7	 --) 
+(-- dext CONTROLADOR 		t= 28.00	CONTROLADOR: el tablero mando un= 7 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 28.00	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 28.00	ASCENSOR: me llego una orden= 0
+t= 28.00	ASCENSOR: estado: est= 0, h= 8.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 28.00	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 28.00	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 28.00	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 28.00	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 28.00	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 30.00	ASCENSOR: llegue al piso= 6, h: 8.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 30.00	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 30.00	ASCENSOR: voy a seguir subiendo,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 32.00	ASCENSOR: llegue al piso= 7, h: 10.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 32.00	CONTROLADOR: el asensor mando un= 7 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 32.00	ASCENSOR: voy a seguir subiendo,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 32.00	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 32.00	ASCENSOR: me llego una orden= 2
+t= 32.00	ASCENSOR: estado: est= 5, h= 12.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 32.00	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 32.00	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 32.00	TABLERO: el controlador me mando un= 3. La cola es= [ 8 -  ]	 --) 
+(-- dext MANAGER 			t= 32.00	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 32.00	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 32.00	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 32.00	ASCENSOR: voy a descansar,h= 12.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 32.00	TABLERO: mando un pedido al controlador= 8	 --) 
+(-- dext CONTROLADOR 		t= 32.00	CONTROLADOR: el tablero mando un= 8 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 32.00	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 32.00	ASCENSOR: me llego una orden= 0
+t= 32.00	ASCENSOR: estado: est= 0, h= 12.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 32.00	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 32.00	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 32.00	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 32.00	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 32.00	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 34.00	ASCENSOR: llegue al piso= 8, h: 12.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 34.00	CONTROLADOR: el asensor mando un= 8 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 34.00	ASCENSOR: voy a seguir subiendo,h= 14.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 34.00	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 34.00	ASCENSOR: me llego una orden= 2
+t= 34.00	ASCENSOR: estado: est= 5, h= 14.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 34.00	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 34.00	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 34.00	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 34.00	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 34.00	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 34.00	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 34.00	ASCENSOR: voy a descansar,h= 14.00, sigma= 100000000000000000000.00 	 --) 
+t= 38.53	GENERADOR: Va un pedido= 5
+(-- dext MANAGER 			t= 38.53	MANAGER: Recibi un pedido: 5	 --) 
+(-- dext MANAGER 			t= 38.53	MANAGER: Recibi un pedido: 5	 --) 
+(-- lambda MANAGER 			t= 38.53	
+	 timeAct: 0.00 
+	 dist_pisos: 3.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,6.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 38.53	COMPARADOR: recibi un mensaje del manager1= 6.00	 --) 
+(-- dint MANAGER 			t= 38.53	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 38.53	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 38.53	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 38.53	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 38.53	COMPARADOR: ts1: 6.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 38.53	MANAGER: Recibi un nodo y debo enviarlo (5,2.00)	 --) 
+(-- lambda MANAGER 			t= 38.53	MANAGER: Envio un pedido: 5 al sistema	 --) 
+(-- dext TABLERO 			t= 38.53	TABLERO: recibi un pedido= 5	 --) 
+(-- dint MANAGER 			t= 38.53	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 38.53	TABLERO: mando un pedido al controlador= 5	 --) 
+(-- dext CONTROLADOR 		t= 38.53	CONTROLADOR: el tablero mando un= 5 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 38.53	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 38.53	ASCENSOR: me llego una orden= 0
+t= 38.53	ASCENSOR: estado: est= 0, h= 6.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 38.53	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 38.53	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 38.53	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 38.53	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 38.53	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 40.53	ASCENSOR: llegue al piso= 5, h: 6.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 40.53	CONTROLADOR: el asensor mando un= 5 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 40.53	ASCENSOR: voy a seguir subiendo,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 40.53	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 40.53	ASCENSOR: me llego una orden= 2
+t= 40.53	ASCENSOR: estado: est= 5, h= 8.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 40.53	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 40.53	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 40.53	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 40.53	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 40.53	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 40.53	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 40.53	ASCENSOR: voy a descansar,h= 8.00, sigma= 100000000000000000000.00 	 --) 
+t= 46.04	GENERADOR: Va un pedido= 8
+(-- dext MANAGER 			t= 46.04	MANAGER: Recibi un pedido: 8	 --) 
+(-- dext MANAGER 			t= 46.04	MANAGER: Recibi un pedido: 8	 --) 
+(-- lambda MANAGER 			t= 46.04	
+	 timeAct: 0.00 
+	 dist_pisos: 0.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,0.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 46.04	COMPARADOR: recibi un mensaje del manager1= 0.00	 --) 
+(-- dint MANAGER 			t= 46.04	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 46.04	
+	 timeAct: 0.00 
+	 dist_pisos: 3.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,6.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 46.04	COMPARADOR: recibi un mensaje del manager2= 6.00	 --) 
+(-- dint MANAGER 			t= 46.04	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 46.04	COMPARADOR: ts1: 0.00, ts2: 6.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 46.04	MANAGER: Recibi un nodo y debo enviarlo (8,0.00)	 --) 
+(-- lambda MANAGER 			t= 46.04	MANAGER: Envio un pedido: 8 al sistema	 --) 
+(-- dext TABLERO 			t= 46.04	TABLERO: recibi un pedido= 8	 --) 
+(-- dint MANAGER 			t= 46.04	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 46.04	TABLERO: mando un pedido al controlador= 8	 --) 
+(-- dext CONTROLADOR 		t= 46.04	CONTROLADOR: el tablero mando un= 8 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 46.04	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 46.04	ASCENSOR: me llego una orden= 2
+t= 46.04	ASCENSOR: estado: est= 2, h= 14.00, sigma= 100000000000000000000.00 	 --) 
+(-- dint CONTROLADOR 		t= 46.04	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 46.04	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 46.04	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 46.04	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 46.04	CONTROLADOR: envie un 3 al tablero 	 --)
+t= 48.15	GENERADOR: Va un pedido= 1
+(-- dext MANAGER 			t= 48.15	MANAGER: Recibi un pedido: 1	 --) 
+(-- dext MANAGER 			t= 48.15	MANAGER: Recibi un pedido: 1	 --) 
+(-- lambda MANAGER 			t= 48.15	
+	 timeAct: 0.00 
+	 dist_pisos: 7.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,14.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 48.15	COMPARADOR: recibi un mensaje del manager1= 14.00	 --) 
+(-- dint MANAGER 			t= 48.15	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 48.15	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 48.15	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 48.15	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 48.15	COMPARADOR: ts1: 14.00, ts2: 8.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 48.15	MANAGER: Recibi un nodo y debo enviarlo (1,8.00)	 --) 
+(-- lambda MANAGER 			t= 48.15	MANAGER: Envio un pedido: 1 al sistema	 --) 
+(-- dext TABLERO 			t= 48.15	TABLERO: recibi un pedido= 1	 --) 
+(-- dint MANAGER 			t= 48.15	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 48.15	TABLERO: mando un pedido al controlador= 1	 --) 
+(-- dext CONTROLADOR 		t= 48.15	CONTROLADOR: el tablero mando un= 1 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 48.15	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 48.15	ASCENSOR: me llego una orden= 1
+t= 48.15	ASCENSOR: estado: est= 1, h= 8.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 48.15	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 48.15	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 48.15	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 48.15	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 48.15	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 50.15	ASCENSOR: llegue al piso= 4, h: 8.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 50.15	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 50.15	ASCENSOR: voy a seguir bajando,h= 6.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 52.15	ASCENSOR: llegue al piso= 3, h: 6.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 52.15	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 52.15	ASCENSOR: voy a seguir bajando,h= 4.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 54.15	ASCENSOR: llegue al piso= 2, h: 4.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 54.15	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 54.15	ASCENSOR: voy a seguir bajando,h= 2.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 56.15	ASCENSOR: llegue al piso= 1, h: 2.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 56.15	CONTROLADOR: el asensor mando un= 1 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 56.15	ASCENSOR: voy a seguir bajando,h= 0.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 56.15	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 56.15	ASCENSOR: me llego una orden= 2
+t= 56.15	ASCENSOR: estado: est= 6, h= 0.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 56.15	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 56.15	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 56.15	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 56.15	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 56.15	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 56.15	CONTROLADOR: el asensor mando un= 1 	 --) 
+(-- dint ASCENSOR 			t= 56.15	ASCENSOR: descansar,h= 0.00, sigma= 100000000000000000000.00 	 --) 
+t= 60.33	GENERADOR: Va un pedido= 5
+(-- dext MANAGER 			t= 60.33	MANAGER: Recibi un pedido: 5	 --) 
+(-- dext MANAGER 			t= 60.33	MANAGER: Recibi un pedido: 5	 --) 
+(-- lambda MANAGER 			t= 60.33	
+	 timeAct: 0.00 
+	 dist_pisos: 3.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,6.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 60.33	COMPARADOR: recibi un mensaje del manager1= 6.00	 --) 
+(-- dint MANAGER 			t= 60.33	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 60.33	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 60.33	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 60.33	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 60.33	COMPARADOR: ts1: 6.00, ts2: 8.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 60.33	MANAGER: Recibi un nodo y debo enviarlo (5,6.00)	 --) 
+(-- lambda MANAGER 			t= 60.33	MANAGER: Envio un pedido: 5 al sistema	 --) 
+(-- dext TABLERO 			t= 60.33	TABLERO: recibi un pedido= 5	 --) 
+(-- dint MANAGER 			t= 60.33	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 60.33	TABLERO: mando un pedido al controlador= 5	 --) 
+(-- dext CONTROLADOR 		t= 60.33	CONTROLADOR: el tablero mando un= 5 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 60.33	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 60.33	ASCENSOR: me llego una orden= 1
+t= 60.33	ASCENSOR: estado: est= 1, h= 14.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 60.33	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 60.33	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 60.33	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 60.33	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 60.33	CONTROLADOR: envie un 4 al tablero 	 --)
+t= 61.60	GENERADOR: Va un pedido= 3
+(-- dext MANAGER 			t= 61.60	MANAGER: Recibi un pedido: 3	 --) 
+(-- dext MANAGER 			t= 61.60	MANAGER: Recibi un pedido: 3	 --) 
+(-- lambda MANAGER 			t= 61.60	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 61.60	COMPARADOR: recibi un mensaje del manager1= 4.00	 --) 
+(-- dint MANAGER 			t= 61.60	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 61.60	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 61.60	COMPARADOR: recibi un mensaje del manager2= 4.00	 --) 
+(-- dint MANAGER 			t= 61.60	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 61.60	COMPARADOR: ts1: 4.00, ts2: 4.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 61.60	MANAGER: Recibi un nodo y debo enviarlo (3,4.00)	 --) 
+(-- lambda MANAGER 			t= 61.60	MANAGER: Envio un pedido: 3 al sistema	 --) 
+(-- dext TABLERO 			t= 61.60	TABLERO: recibi un pedido= 3	 --) 
+(-- dint MANAGER 			t= 61.60	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 62.33	ASCENSOR: llegue al piso= 7, h: 14.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 62.33	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 62.33	ASCENSOR: voy a seguir bajando,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 64.33	ASCENSOR: llegue al piso= 6, h: 12.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 64.33	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 64.33	ASCENSOR: voy a seguir bajando,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 66.33	ASCENSOR: llegue al piso= 5, h: 10.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 66.33	CONTROLADOR: el asensor mando un= 5 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 66.33	ASCENSOR: voy a seguir bajando,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 66.33	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 66.33	ASCENSOR: me llego una orden= 2
+t= 66.33	ASCENSOR: estado: est= 6, h= 8.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 66.33	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 66.33	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 66.33	TABLERO: el controlador me mando un= 3. La cola es= [ 3 -  ]	 --) 
+(-- dext MANAGER 			t= 66.33	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 66.33	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 66.33	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 66.33	ASCENSOR: descansar,h= 8.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 66.33	TABLERO: mando un pedido al controlador= 3	 --) 
+(-- dext CONTROLADOR 		t= 66.33	CONTROLADOR: el tablero mando un= 3 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 66.33	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 66.33	ASCENSOR: me llego una orden= 1
+t= 66.33	ASCENSOR: estado: est= 1, h= 8.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 66.33	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 66.33	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 66.33	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 66.33	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 66.33	CONTROLADOR: envie un 4 al tablero 	 --)
+t= 68.01	GENERADOR: Va un pedido= 9
+(-- dext MANAGER 			t= 68.01	MANAGER: Recibi un pedido: 9	 --) 
+(-- dext MANAGER 			t= 68.01	MANAGER: Recibi un pedido: 9	 --) 
+(-- lambda MANAGER 			t= 68.01	
+	 timeAct: 0.00 
+	 dist_pisos: 6.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,12.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 68.01	COMPARADOR: recibi un mensaje del manager1= 12.00	 --) 
+(-- dint MANAGER 			t= 68.01	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 68.01	
+	 timeAct: 0.00 
+	 dist_pisos: 8.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,16.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 68.01	COMPARADOR: recibi un mensaje del manager2= 16.00	 --) 
+(-- dint MANAGER 			t= 68.01	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 68.01	COMPARADOR: ts1: 12.00, ts2: 16.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 68.01	MANAGER: Recibi un nodo y debo enviarlo (9,12.00)	 --) 
+(-- lambda MANAGER 			t= 68.01	MANAGER: Envio un pedido: 9 al sistema	 --) 
+(-- dext TABLERO 			t= 68.01	TABLERO: recibi un pedido= 9	 --) 
+(-- dint MANAGER 			t= 68.01	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 68.33	ASCENSOR: llegue al piso= 4, h: 8.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 68.33	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 68.33	ASCENSOR: voy a seguir bajando,h= 6.00, sigma= 2.00 	 --) 
+t= 68.62	GENERADOR: Va un pedido= 2
+(-- dext MANAGER 			t= 68.62	MANAGER: Recibi un pedido: 2	 --) 
+(-- dext MANAGER 			t= 68.62	MANAGER: Recibi un pedido: 2	 --) 
+(-- lambda MANAGER 			t= 68.62	
+	 timeAct: 0.00 
+	 dist_pisos: 7.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (2,14.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 68.62	COMPARADOR: recibi un mensaje del manager1= 14.00	 --) 
+(-- dint MANAGER 			t= 68.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 68.62	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (2,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 68.62	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 68.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 68.62	COMPARADOR: ts1: 14.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 68.62	MANAGER: Recibi un nodo y debo enviarlo (2,2.00)	 --) 
+(-- lambda MANAGER 			t= 68.62	MANAGER: Envio un pedido: 2 al sistema	 --) 
+(-- dext TABLERO 			t= 68.62	TABLERO: recibi un pedido= 2	 --) 
+(-- dint MANAGER 			t= 68.62	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 68.62	TABLERO: mando un pedido al controlador= 2	 --) 
+(-- dext CONTROLADOR 		t= 68.62	CONTROLADOR: el tablero mando un= 2 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 68.62	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 68.62	ASCENSOR: me llego una orden= 0
+t= 68.62	ASCENSOR: estado: est= 0, h= 0.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 68.62	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 68.62	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 68.62	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 68.62	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 68.62	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 70.33	ASCENSOR: llegue al piso= 3, h: 6.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 70.33	CONTROLADOR: el asensor mando un= 3 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 70.33	ASCENSOR: voy a seguir bajando,h= 4.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 70.33	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 70.33	ASCENSOR: me llego una orden= 2
+t= 70.33	ASCENSOR: estado: est= 6, h= 4.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 70.33	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 70.33	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 70.33	TABLERO: el controlador me mando un= 3. La cola es= [ 9 -  ]	 --) 
+(-- dext MANAGER 			t= 70.33	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 70.33	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 70.33	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 70.33	ASCENSOR: descansar,h= 4.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 70.33	TABLERO: mando un pedido al controlador= 9	 --) 
+(-- dext CONTROLADOR 		t= 70.33	CONTROLADOR: el tablero mando un= 9 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 70.33	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 70.33	ASCENSOR: me llego una orden= 0
+t= 70.33	ASCENSOR: estado: est= 0, h= 4.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 70.33	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 70.33	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 70.33	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 70.33	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 70.33	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 70.62	ASCENSOR: llegue al piso= 2, h: 0.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 70.62	CONTROLADOR: el asensor mando un= 2 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 70.62	ASCENSOR: voy a seguir subiendo,h= 2.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 70.62	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 70.62	ASCENSOR: me llego una orden= 2
+t= 70.62	ASCENSOR: estado: est= 5, h= 2.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 70.62	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 70.62	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 70.62	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 70.62	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 70.62	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 70.62	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 70.62	ASCENSOR: voy a descansar,h= 2.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda ASCENSOR 		t= 72.33	ASCENSOR: llegue al piso= 4, h: 4.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 72.33	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 72.33	ASCENSOR: voy a seguir subiendo,h= 6.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 74.33	ASCENSOR: llegue al piso= 5, h: 6.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 74.33	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 74.33	ASCENSOR: voy a seguir subiendo,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 76.33	ASCENSOR: llegue al piso= 6, h: 8.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 76.33	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 76.33	ASCENSOR: voy a seguir subiendo,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 78.33	ASCENSOR: llegue al piso= 7, h: 10.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 78.33	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 78.33	ASCENSOR: voy a seguir subiendo,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 80.33	ASCENSOR: llegue al piso= 8, h: 12.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 80.33	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 80.33	ASCENSOR: voy a seguir subiendo,h= 14.00, sigma= 2.00 	 --) 
+t= 80.81	GENERADOR: Va un pedido= 10
+(-- dext MANAGER 			t= 80.81	MANAGER: Recibi un pedido: 10	 --) 
+(-- dext MANAGER 			t= 80.81	MANAGER: Recibi un pedido: 10	 --) 
+(-- lambda MANAGER 			t= 80.81	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (10,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 80.81	COMPARADOR: recibi un mensaje del manager1= 2.00	 --) 
+(-- dint MANAGER 			t= 80.81	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 80.81	
+	 timeAct: 0.00 
+	 dist_pisos: 8.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (10,16.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 80.81	COMPARADOR: recibi un mensaje del manager2= 16.00	 --) 
+(-- dint MANAGER 			t= 80.81	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 80.81	COMPARADOR: ts1: 2.00, ts2: 16.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 80.81	MANAGER: Recibi un nodo y debo enviarlo (10,2.00)	 --) 
+(-- lambda MANAGER 			t= 80.81	MANAGER: Envio un pedido: 10 al sistema	 --) 
+(-- dext TABLERO 			t= 80.81	TABLERO: recibi un pedido= 10	 --) 
+(-- dint MANAGER 			t= 80.81	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda ASCENSOR 		t= 82.33	ASCENSOR: llegue al piso= 9, h: 14.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 82.33	CONTROLADOR: el asensor mando un= 9 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 82.33	ASCENSOR: voy a seguir subiendo,h= 16.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 82.33	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 82.33	ASCENSOR: me llego una orden= 2
+t= 82.33	ASCENSOR: estado: est= 5, h= 16.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 82.33	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 82.33	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 82.33	TABLERO: el controlador me mando un= 3. La cola es= [ 10 -  ]	 --) 
+(-- dext MANAGER 			t= 82.33	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 82.33	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 82.33	CONTROLADOR: el asensor mando un= 9 	 --) 
+(-- dint ASCENSOR 			t= 82.33	ASCENSOR: voy a descansar,h= 16.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda TABLERO 			t= 82.33	TABLERO: mando un pedido al controlador= 10	 --) 
+(-- dext CONTROLADOR 		t= 82.33	CONTROLADOR: el tablero mando un= 10 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 82.33	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 82.33	ASCENSOR: me llego una orden= 0
+t= 82.33	ASCENSOR: estado: est= 0, h= 16.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 82.33	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 82.33	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 82.33	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 82.33	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 82.33	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 84.33	ASCENSOR: llegue al piso= 10, h: 16.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 84.33	CONTROLADOR: el asensor mando un= 10 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 84.33	ASCENSOR: voy a seguir subiendo,h= 18.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 84.33	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 84.33	ASCENSOR: me llego una orden= 2
+t= 84.33	ASCENSOR: estado: est= 5, h= 18.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 84.33	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 84.33	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 84.33	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 84.33	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 84.33	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 84.33	CONTROLADOR: el asensor mando un= 10 	 --) 
+(-- dint ASCENSOR 			t= 84.33	ASCENSOR: voy a descansar,h= 18.00, sigma= 100000000000000000000.00 	 --) 
+t= 91.62	GENERADOR: Va un pedido= 1
+(-- dext MANAGER 			t= 91.62	MANAGER: Recibi un pedido: 1	 --) 
+(-- dext MANAGER 			t= 91.62	MANAGER: Recibi un pedido: 1	 --) 
+(-- lambda MANAGER 			t= 91.62	
+	 timeAct: 0.00 
+	 dist_pisos: 9.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,18.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 91.62	COMPARADOR: recibi un mensaje del manager1= 18.00	 --) 
+(-- dint MANAGER 			t= 91.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 91.62	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 91.62	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 91.62	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 91.62	COMPARADOR: ts1: 18.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 91.62	MANAGER: Recibi un nodo y debo enviarlo (1,2.00)	 --) 
+(-- lambda MANAGER 			t= 91.62	MANAGER: Envio un pedido: 1 al sistema	 --) 
+(-- dext TABLERO 			t= 91.62	TABLERO: recibi un pedido= 1	 --) 
+(-- dint MANAGER 			t= 91.62	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 91.62	TABLERO: mando un pedido al controlador= 1	 --) 
+(-- dext CONTROLADOR 		t= 91.62	CONTROLADOR: el tablero mando un= 1 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 91.62	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 91.62	ASCENSOR: me llego una orden= 1
+t= 91.62	ASCENSOR: estado: est= 1, h= 2.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 91.62	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 91.62	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 91.62	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 91.62	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 91.62	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 93.62	ASCENSOR: llegue al piso= 1, h: 2.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 93.62	CONTROLADOR: el asensor mando un= 1 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 93.62	ASCENSOR: voy a seguir bajando,h= 0.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 93.62	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 93.62	ASCENSOR: me llego una orden= 2
+t= 93.62	ASCENSOR: estado: est= 6, h= 0.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 93.62	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 93.62	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 93.62	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 93.62	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 93.62	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 93.62	CONTROLADOR: el asensor mando un= 1 	 --) 
+(-- dint ASCENSOR 			t= 93.62	ASCENSOR: descansar,h= 0.00, sigma= 100000000000000000000.00 	 --) 
+t= 95.74	GENERADOR: Va un pedido= 5
+(-- dext MANAGER 			t= 95.74	MANAGER: Recibi un pedido: 5	 --) 
+(-- dext MANAGER 			t= 95.74	MANAGER: Recibi un pedido: 5	 --) 
+(-- lambda MANAGER 			t= 95.74	
+	 timeAct: 0.00 
+	 dist_pisos: 5.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,10.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 95.74	COMPARADOR: recibi un mensaje del manager1= 10.00	 --) 
+(-- dint MANAGER 			t= 95.74	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 95.74	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 95.74	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 95.74	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 95.74	COMPARADOR: ts1: 10.00, ts2: 8.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 95.74	MANAGER: Recibi un nodo y debo enviarlo (5,8.00)	 --) 
+(-- lambda MANAGER 			t= 95.74	MANAGER: Envio un pedido: 5 al sistema	 --) 
+(-- dext TABLERO 			t= 95.74	TABLERO: recibi un pedido= 5	 --) 
+(-- dint MANAGER 			t= 95.74	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 95.74	TABLERO: mando un pedido al controlador= 5	 --) 
+(-- dext CONTROLADOR 		t= 95.74	CONTROLADOR: el tablero mando un= 5 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 95.74	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 95.74	ASCENSOR: me llego una orden= 0
+t= 95.74	ASCENSOR: estado: est= 0, h= 0.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 95.74	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 95.74	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 95.74	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 95.74	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 95.74	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 97.74	ASCENSOR: llegue al piso= 2, h: 0.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 97.74	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 97.74	ASCENSOR: voy a seguir subiendo,h= 2.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 99.74	ASCENSOR: llegue al piso= 3, h: 2.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 99.74	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 99.74	ASCENSOR: voy a seguir subiendo,h= 4.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 101.74	ASCENSOR: llegue al piso= 4, h: 4.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 101.74	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 101.74	ASCENSOR: voy a seguir subiendo,h= 6.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 103.74	ASCENSOR: llegue al piso= 5, h: 6.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 103.74	CONTROLADOR: el asensor mando un= 5 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 103.74	ASCENSOR: voy a seguir subiendo,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 103.74	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 103.74	ASCENSOR: me llego una orden= 2
+t= 103.74	ASCENSOR: estado: est= 5, h= 8.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 103.74	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 103.74	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 103.74	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 103.74	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 103.74	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 103.74	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 103.74	ASCENSOR: voy a descansar,h= 8.00, sigma= 100000000000000000000.00 	 --) 
+t= 107.56	GENERADOR: Va un pedido= 9
+(-- dext MANAGER 			t= 107.56	MANAGER: Recibi un pedido: 9	 --) 
+(-- dext MANAGER 			t= 107.56	MANAGER: Recibi un pedido: 9	 --) 
+(-- lambda MANAGER 			t= 107.56	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 107.56	COMPARADOR: recibi un mensaje del manager1= 2.00	 --) 
+(-- dint MANAGER 			t= 107.56	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 107.56	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 107.56	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 107.56	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 107.56	COMPARADOR: ts1: 2.00, ts2: 8.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 107.56	MANAGER: Recibi un nodo y debo enviarlo (9,2.00)	 --) 
+(-- lambda MANAGER 			t= 107.56	MANAGER: Envio un pedido: 9 al sistema	 --) 
+(-- dext TABLERO 			t= 107.56	TABLERO: recibi un pedido= 9	 --) 
+(-- dint MANAGER 			t= 107.56	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 107.56	TABLERO: mando un pedido al controlador= 9	 --) 
+(-- dext CONTROLADOR 		t= 107.56	CONTROLADOR: el tablero mando un= 9 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 107.56	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 107.56	ASCENSOR: me llego una orden= 1
+t= 107.56	ASCENSOR: estado: est= 1, h= 18.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 107.56	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 107.56	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 107.56	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 107.56	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 107.56	CONTROLADOR: envie un 4 al tablero 	 --)
+t= 108.82	GENERADOR: Va un pedido= 4
+(-- dext MANAGER 			t= 108.82	MANAGER: Recibi un pedido: 4	 --) 
+(-- dext MANAGER 			t= 108.82	MANAGER: Recibi un pedido: 4	 --) 
+(-- lambda MANAGER 			t= 108.82	
+	 timeAct: 0.00 
+	 dist_pisos: 5.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (4,10.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 108.82	COMPARADOR: recibi un mensaje del manager1= 10.00	 --) 
+(-- dint MANAGER 			t= 108.82	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 108.82	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (4,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 108.82	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 108.82	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 108.82	COMPARADOR: ts1: 10.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 108.82	MANAGER: Recibi un nodo y debo enviarlo (4,2.00)	 --) 
+(-- lambda MANAGER 			t= 108.82	MANAGER: Envio un pedido: 4 al sistema	 --) 
+(-- dext TABLERO 			t= 108.82	TABLERO: recibi un pedido= 4	 --) 
+(-- dint MANAGER 			t= 108.82	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 108.82	TABLERO: mando un pedido al controlador= 4	 --) 
+(-- dext CONTROLADOR 		t= 108.82	CONTROLADOR: el tablero mando un= 4 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 108.82	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 108.82	ASCENSOR: me llego una orden= 1
+t= 108.82	ASCENSOR: estado: est= 1, h= 8.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 108.82	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 108.82	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 108.82	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 108.82	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 108.82	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 109.56	ASCENSOR: llegue al piso= 9, h: 18.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 109.56	CONTROLADOR: el asensor mando un= 9 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 109.56	ASCENSOR: voy a seguir bajando,h= 16.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 109.56	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 109.56	ASCENSOR: me llego una orden= 2
+t= 109.56	ASCENSOR: estado: est= 6, h= 16.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 109.56	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 109.56	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 109.56	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 109.56	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 109.56	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 109.56	CONTROLADOR: el asensor mando un= 9 	 --) 
+(-- dint ASCENSOR 			t= 109.56	ASCENSOR: descansar,h= 16.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda ASCENSOR 		t= 110.82	ASCENSOR: llegue al piso= 4, h: 8.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 110.82	CONTROLADOR: el asensor mando un= 4 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 110.82	ASCENSOR: voy a seguir bajando,h= 6.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 110.82	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 110.82	ASCENSOR: me llego una orden= 2
+t= 110.82	ASCENSOR: estado: est= 6, h= 6.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 110.82	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 110.82	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 110.82	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 110.82	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 110.82	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 110.82	CONTROLADOR: el asensor mando un= 4 	 --) 
+(-- dint ASCENSOR 			t= 110.82	ASCENSOR: descansar,h= 6.00, sigma= 100000000000000000000.00 	 --) 
+t= 116.70	GENERADOR: Va un pedido= 3
+(-- dext MANAGER 			t= 116.70	MANAGER: Recibi un pedido: 3	 --) 
+(-- dext MANAGER 			t= 116.70	MANAGER: Recibi un pedido: 3	 --) 
+(-- lambda MANAGER 			t= 116.70	
+	 timeAct: 0.00 
+	 dist_pisos: 6.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,12.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 116.70	COMPARADOR: recibi un mensaje del manager1= 12.00	 --) 
+(-- dint MANAGER 			t= 116.70	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 116.70	
+	 timeAct: 0.00 
+	 dist_pisos: 1.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (3,2.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 116.70	COMPARADOR: recibi un mensaje del manager2= 2.00	 --) 
+(-- dint MANAGER 			t= 116.70	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 116.70	COMPARADOR: ts1: 12.00, ts2: 2.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 116.70	MANAGER: Recibi un nodo y debo enviarlo (3,2.00)	 --) 
+(-- lambda MANAGER 			t= 116.70	MANAGER: Envio un pedido: 3 al sistema	 --) 
+(-- dext TABLERO 			t= 116.70	TABLERO: recibi un pedido= 3	 --) 
+(-- dint MANAGER 			t= 116.70	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 116.70	TABLERO: mando un pedido al controlador= 3	 --) 
+(-- dext CONTROLADOR 		t= 116.70	CONTROLADOR: el tablero mando un= 3 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 116.70	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 116.70	ASCENSOR: me llego una orden= 1
+t= 116.70	ASCENSOR: estado: est= 1, h= 6.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 116.70	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 116.70	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 116.70	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 116.70	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 116.70	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 118.70	ASCENSOR: llegue al piso= 3, h: 6.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 118.70	CONTROLADOR: el asensor mando un= 3 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 118.70	ASCENSOR: voy a seguir bajando,h= 4.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 118.70	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 118.70	ASCENSOR: me llego una orden= 2
+t= 118.70	ASCENSOR: estado: est= 6, h= 4.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 118.70	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 118.70	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 118.70	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 118.70	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 118.70	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 118.70	CONTROLADOR: el asensor mando un= 3 	 --) 
+(-- dint ASCENSOR 			t= 118.70	ASCENSOR: descansar,h= 4.00, sigma= 100000000000000000000.00 	 --) 
+t= 126.23	GENERADOR: Va un pedido= 9
+(-- dext MANAGER 			t= 126.23	MANAGER: Recibi un pedido: 9	 --) 
+(-- dext MANAGER 			t= 126.23	MANAGER: Recibi un pedido: 9	 --) 
+(-- lambda MANAGER 			t= 126.23	
+	 timeAct: 0.00 
+	 dist_pisos: 0.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,0.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 126.23	COMPARADOR: recibi un mensaje del manager1= 0.00	 --) 
+(-- dint MANAGER 			t= 126.23	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 126.23	
+	 timeAct: 0.00 
+	 dist_pisos: 6.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (9,12.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 126.23	COMPARADOR: recibi un mensaje del manager2= 12.00	 --) 
+(-- dint MANAGER 			t= 126.23	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 126.23	COMPARADOR: ts1: 0.00, ts2: 12.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 126.23	MANAGER: Recibi un nodo y debo enviarlo (9,0.00)	 --) 
+(-- lambda MANAGER 			t= 126.23	MANAGER: Envio un pedido: 9 al sistema	 --) 
+(-- dext TABLERO 			t= 126.23	TABLERO: recibi un pedido= 9	 --) 
+(-- dint MANAGER 			t= 126.23	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 126.23	TABLERO: mando un pedido al controlador= 9	 --) 
+(-- dext CONTROLADOR 		t= 126.23	CONTROLADOR: el tablero mando un= 9 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 126.23	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 126.23	ASCENSOR: me llego una orden= 2
+t= 126.23	ASCENSOR: estado: est= 2, h= 16.00, sigma= 100000000000000000000.00 	 --) 
+(-- dint CONTROLADOR 		t= 126.23	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 126.23	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 126.23	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 126.23	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 126.23	CONTROLADOR: envie un 3 al tablero 	 --)
+t= 152.69	GENERADOR: Va un pedido= 7
+(-- dext MANAGER 			t= 152.69	MANAGER: Recibi un pedido: 7	 --) 
+(-- dext MANAGER 			t= 152.69	MANAGER: Recibi un pedido: 7	 --) 
+(-- lambda MANAGER 			t= 152.69	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (7,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 152.69	COMPARADOR: recibi un mensaje del manager1= 4.00	 --) 
+(-- dint MANAGER 			t= 152.69	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 152.69	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (7,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 152.69	COMPARADOR: recibi un mensaje del manager2= 8.00	 --) 
+(-- dint MANAGER 			t= 152.69	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 152.69	COMPARADOR: ts1: 4.00, ts2: 8.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 152.69	MANAGER: Recibi un nodo y debo enviarlo (7,4.00)	 --) 
+(-- lambda MANAGER 			t= 152.69	MANAGER: Envio un pedido: 7 al sistema	 --) 
+(-- dext TABLERO 			t= 152.69	TABLERO: recibi un pedido= 7	 --) 
+(-- dint MANAGER 			t= 152.69	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 152.69	TABLERO: mando un pedido al controlador= 7	 --) 
+(-- dext CONTROLADOR 		t= 152.69	CONTROLADOR: el tablero mando un= 7 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 152.69	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 152.69	ASCENSOR: me llego una orden= 1
+t= 152.69	ASCENSOR: estado: est= 1, h= 16.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 152.69	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 152.69	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 152.69	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 152.69	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 152.69	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 154.69	ASCENSOR: llegue al piso= 8, h: 16.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 154.69	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 154.69	ASCENSOR: voy a seguir bajando,h= 14.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 156.69	ASCENSOR: llegue al piso= 7, h: 14.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 156.69	CONTROLADOR: el asensor mando un= 7 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 156.69	ASCENSOR: voy a seguir bajando,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 156.69	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 156.69	ASCENSOR: me llego una orden= 2
+t= 156.69	ASCENSOR: estado: est= 6, h= 12.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 156.69	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 156.69	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 156.69	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 156.69	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 156.69	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 156.69	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 156.69	ASCENSOR: descansar,h= 12.00, sigma= 100000000000000000000.00 	 --) 
+t= 157.77	GENERADOR: Va un pedido= 5
+(-- dext MANAGER 			t= 157.77	MANAGER: Recibi un pedido: 5	 --) 
+(-- dext MANAGER 			t= 157.77	MANAGER: Recibi un pedido: 5	 --) 
+(-- lambda MANAGER 			t= 157.77	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 157.77	COMPARADOR: recibi un mensaje del manager1= 4.00	 --) 
+(-- dint MANAGER 			t= 157.77	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 157.77	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (5,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 157.77	COMPARADOR: recibi un mensaje del manager2= 4.00	 --) 
+(-- dint MANAGER 			t= 157.77	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 157.77	COMPARADOR: ts1: 4.00, ts2: 4.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 157.77	MANAGER: Recibi un nodo y debo enviarlo (5,4.00)	 --) 
+(-- lambda MANAGER 			t= 157.77	MANAGER: Envio un pedido: 5 al sistema	 --) 
+(-- dext TABLERO 			t= 157.77	TABLERO: recibi un pedido= 5	 --) 
+(-- dint MANAGER 			t= 157.77	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 157.77	TABLERO: mando un pedido al controlador= 5	 --) 
+(-- dext CONTROLADOR 		t= 157.77	CONTROLADOR: el tablero mando un= 5 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 157.77	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 157.77	ASCENSOR: me llego una orden= 1
+t= 157.77	ASCENSOR: estado: est= 1, h= 12.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 157.77	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 157.77	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 157.77	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 157.77	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 157.77	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 159.77	ASCENSOR: llegue al piso= 6, h: 12.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 159.77	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 159.77	ASCENSOR: voy a seguir bajando,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 161.77	ASCENSOR: llegue al piso= 5, h: 10.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 161.77	CONTROLADOR: el asensor mando un= 5 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 161.77	ASCENSOR: voy a seguir bajando,h= 8.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 161.77	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 161.77	ASCENSOR: me llego una orden= 2
+t= 161.77	ASCENSOR: estado: est= 6, h= 8.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 161.77	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 161.77	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 161.77	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 161.77	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 161.77	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 161.77	CONTROLADOR: el asensor mando un= 5 	 --) 
+(-- dint ASCENSOR 			t= 161.77	ASCENSOR: descansar,h= 8.00, sigma= 100000000000000000000.00 	 --) 
+t= 166.29	GENERADOR: Va un pedido= 1
+(-- dext MANAGER 			t= 166.29	MANAGER: Recibi un pedido: 1	 --) 
+(-- dext MANAGER 			t= 166.29	MANAGER: Recibi un pedido: 1	 --) 
+(-- lambda MANAGER 			t= 166.29	
+	 timeAct: 0.00 
+	 dist_pisos: 4.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,8.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 166.29	COMPARADOR: recibi un mensaje del manager1= 8.00	 --) 
+(-- dint MANAGER 			t= 166.29	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 166.29	
+	 timeAct: 0.00 
+	 dist_pisos: 2.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (1,4.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 166.29	COMPARADOR: recibi un mensaje del manager2= 4.00	 --) 
+(-- dint MANAGER 			t= 166.29	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 166.29	COMPARADOR: ts1: 8.00, ts2: 4.00, se lo envio al 2	 --) 
+(-- dext MANAGER 			t= 166.29	MANAGER: Recibi un nodo y debo enviarlo (1,4.00)	 --) 
+(-- lambda MANAGER 			t= 166.29	MANAGER: Envio un pedido: 1 al sistema	 --) 
+(-- dext TABLERO 			t= 166.29	TABLERO: recibi un pedido= 1	 --) 
+(-- dint MANAGER 			t= 166.29	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 166.29	TABLERO: mando un pedido al controlador= 1	 --) 
+(-- dext CONTROLADOR 		t= 166.29	CONTROLADOR: el tablero mando un= 1 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 166.29	CONTROLADOR: mando al ascensor= 1	 --) 
+(-- dext ASCENSOR 			t= 166.29	ASCENSOR: me llego una orden= 1
+t= 166.29	ASCENSOR: estado: est= 1, h= 4.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 166.29	CONTROLADOR: envie un 1 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 166.29	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 166.29	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 166.29	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 166.29	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 168.29	ASCENSOR: llegue al piso= 2, h: 4.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 168.29	CONTROLADOR: el asensor mando un= 2 	 --) 
+(-- dint ASCENSOR 			t= 168.29	ASCENSOR: voy a seguir bajando,h= 2.00, sigma= 2.00 	 --) 
+t= 168.95	GENERADOR: Va un pedido= 8
+(-- dext MANAGER 			t= 168.95	MANAGER: Recibi un pedido: 8	 --) 
+(-- dext MANAGER 			t= 168.95	MANAGER: Recibi un pedido: 8	 --) 
+(-- lambda MANAGER 			t= 168.95	
+	 timeAct: 0.00 
+	 dist_pisos: 3.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,6.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 168.95	COMPARADOR: recibi un mensaje del manager1= 6.00	 --) 
+(-- dint MANAGER 			t= 168.95	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda MANAGER 			t= 168.95	
+	 timeAct: 0.00 
+	 dist_pisos: 7.00 
+	 ps.total_time: 0.00 
+			MANAGER: Envio un nodo: (8,14.00) al comparador	 --) 
+(-- dexr COMPARADOR 			t= 168.95	COMPARADOR: recibi un mensaje del manager2= 14.00	 --) 
+(-- dint MANAGER 			t= 168.95	MANAGER: el puerto de salida fue: 0, timeAct: 0.00	 --) 
+(-- lambda COMPARADOR 			t= 168.95	COMPARADOR: ts1: 6.00, ts2: 14.00, se lo envio al 1	 --) 
+(-- dext MANAGER 			t= 168.95	MANAGER: Recibi un nodo y debo enviarlo (8,6.00)	 --) 
+(-- lambda MANAGER 			t= 168.95	MANAGER: Envio un pedido: 8 al sistema	 --) 
+(-- dext TABLERO 			t= 168.95	TABLERO: recibi un pedido= 8	 --) 
+(-- dint MANAGER 			t= 168.95	MANAGER: el puerto de salida fue: 1, timeAct: 0.00	 --) 
+(-- lambda TABLERO 			t= 168.95	TABLERO: mando un pedido al controlador= 8	 --) 
+(-- dext CONTROLADOR 		t= 168.95	CONTROLADOR: el tablero mando un= 8 	 --) 
+(-- dint TABLERO 			 --) 
+(-- lambda CONTROLADOR 		t= 168.95	CONTROLADOR: mando al ascensor= 0	 --) 
+(-- dext ASCENSOR 			t= 168.95	ASCENSOR: me llego una orden= 0
+t= 168.95	ASCENSOR: estado: est= 0, h= 8.00, sigma= 2.00 	 --) 
+(-- dint CONTROLADOR 		t= 168.95	CONTROLADOR: envie un 0 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 168.95	CONTROLADOR: mando al tablero= 4	 --) 
+(-- dext TABLERO 			t= 168.95	TABLERO: el controlador me mando un= 4	 --) 
+(-- dext MANAGER 			t= 168.95	MANAGER: Recibi un 4 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 168.95	CONTROLADOR: envie un 4 al tablero 	 --)
+(-- lambda ASCENSOR 		t= 170.29	ASCENSOR: llegue al piso= 1, h: 2.00, est= 1 	 --) 
+(-- dext CONTROLADOR 		t= 170.29	CONTROLADOR: el asensor mando un= 1 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 170.29	ASCENSOR: voy a seguir bajando,h= 0.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 170.29	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 170.29	ASCENSOR: me llego una orden= 2
+t= 170.29	ASCENSOR: estado: est= 6, h= 0.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 170.29	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 170.29	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 170.29	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 170.29	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 170.29	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 170.29	CONTROLADOR: el asensor mando un= 1 	 --) 
+(-- dint ASCENSOR 			t= 170.29	ASCENSOR: descansar,h= 0.00, sigma= 100000000000000000000.00 	 --) 
+(-- lambda ASCENSOR 		t= 170.95	ASCENSOR: llegue al piso= 6, h: 8.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 170.95	CONTROLADOR: el asensor mando un= 6 	 --) 
+(-- dint ASCENSOR 			t= 170.95	ASCENSOR: voy a seguir subiendo,h= 10.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 172.95	ASCENSOR: llegue al piso= 7, h: 10.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 172.95	CONTROLADOR: el asensor mando un= 7 	 --) 
+(-- dint ASCENSOR 			t= 172.95	ASCENSOR: voy a seguir subiendo,h= 12.00, sigma= 2.00 	 --) 
+(-- lambda ASCENSOR 		t= 174.95	ASCENSOR: llegue al piso= 8, h: 12.00, est= 0 	 --) 
+(-- dext CONTROLADOR 		t= 174.95	CONTROLADOR: el asensor mando un= 8 - llego al destino 	 --) 
+(-- dint ASCENSOR 			t= 174.95	ASCENSOR: voy a seguir subiendo,h= 14.00, sigma= 2.00 	 --) 
+(-- lambda CONTROLADOR 		t= 174.95	CONTROLADOR: mando al ascensor= 2	 --) 
+(-- dext ASCENSOR 			t= 174.95	ASCENSOR: me llego una orden= 2
+t= 174.95	ASCENSOR: estado: est= 5, h= 14.00, sigma= 0.00 	 --) 
+(-- dint CONTROLADOR 		t= 174.95	CONTROLADOR: envie un 2 al ascensor 	 --)
+(-- lambda CONTROLADOR 		t= 174.95	CONTROLADOR: mando al tablero= 3	 --) 
+(-- dext TABLERO 			t= 174.95	TABLERO: el controlador me mando un= 3. La cola esta vacia	 --) 
+(-- dext MANAGER 			t= 174.95	MANAGER: Recibi un 3 del sistema, sigma: 100000000000000000000.00	 --) 
+(-- dint CONTROLADOR 		t= 174.95	CONTROLADOR: envie un 3 al tablero 	 --)
+(-- lambda ASCENSOR 			 --) 
+(-- dext CONTROLADOR 		t= 174.95	CONTROLADOR: el asensor mando un= 8 	 --) 
+(-- dint ASCENSOR 			t= 174.95	ASCENSOR: voy a descansar,h= 14.00, sigma= 100000000000000000000.00 	 --) 
+Simulation Ended (0.0487 sec)
